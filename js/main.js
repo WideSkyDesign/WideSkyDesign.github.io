@@ -790,8 +790,24 @@ function SetTask(){
 function initGlass(){
 	$(".glassOverlay").hide();
 	if(navigator && navigator.mediaDevices){
-    	const options = { audio: false, video: { facingMode: "user", width: 200, height: 200  } }
-		navigator.mediaDevices.getUserMedia(options)
+    	//const options = { audio: false, video: { facingMode: "environment", width: 200, height: 200  } }
+		const constraints = {
+		audio: false,
+		video: {
+			facingMode: "environment",
+			width: {
+			min: 1280,
+			ideal: 1920,
+			max: 2560,
+			},
+			height: {
+			min: 720,
+			ideal: 1080,
+			max: 1440,
+			},
+		},
+		}
+		navigator.mediaDevices.getUserMedia(constraints)
 		.then(function(stream) {
 			var video = document.getElementById('camera');
 			video.srcObject = stream;
