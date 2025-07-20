@@ -299,8 +299,8 @@ function init() {
 						case "0.1":
 						case "2.0":
 						case "4.0":
-							$("body").addClass("black");
-							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
+							//$("body").addClass("black");
+							$(":mobile-pagecontainer").pagecontainer("change", "#taskContentAR", {changeHash: false});
 							break;
 						default:
 							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
@@ -722,7 +722,7 @@ function SetTask(){
 		break;
 		case "0.1":
 			modelName = "seaside.glb";
-			getLocationNow();
+			//getLocationNow();
 			break;
 		case "2.0":
 			modelName = "arch.glb";

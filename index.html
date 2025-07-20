@@ -527,6 +527,13 @@
 
     </div>
 
+    <div data-role="page" id="taskContentAR" class="page_taskAR">
+        <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+            <a-camera id='camera1' look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 5'> ></a-camera>
+            <a-entity gltf-model='./assets/models/arch.glb' gps-new-entity-place='latitude: 52.951903; longitude: -1.143857' position='0 -1 0' scale='10 10 10'></a-entity>
+        </a-scene>
+    </div>
+
     <div class="pop_question overlay">
         <div class="popup green dbtb_back">
             <div class="popHeader">
