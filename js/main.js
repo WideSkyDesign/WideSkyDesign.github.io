@@ -8,11 +8,15 @@ scoreMC = 0,
 scoreLF = 0,
 scoreNGU = 0,
 onboarding = 0,
+gameScore = 0;
+gameCount = 0;
+gameDate = "";
 loctask = "";
 themeVideo = "",
 interval = null,
 isCorrect = false,
 isComplete = false,
+isFirst = true,
 isBack = false,
 isDBTB = false,
 isLF = false,
@@ -20,6 +24,7 @@ isMC = false,
 isNGU = false;
 
 let compass;
+var pz;
 
 $(document).ready(function () {
 
@@ -44,12 +49,14 @@ function init() {
 				$("audio.watkinCircle")[0].load();
 			break;
 			case "map":
-				var pz = PinchZoomer.get("pz1");
-				pz.x(-990);
-				pz.y(-340);
-				//console.log("x " + pz.x() + " y " + pz.y() + " zoom " + pz.zoom());
-				//$(".mapContainer").scrollLeft(2200);
-				//$(".mapContainer").scrollTop(1000);
+				if(isFirst){
+					pz = PinchZoomer.get("pz1");
+					pz.zoom(0.5);
+					pz.x(-990);
+					pz.y(-340);
+					isFirst = false;
+					pz.on(PinchZoomer.ZOOM, onZoom);
+				}
 			break;
 			case "location":
 				$(".page_location video.wait")[0].pause();
@@ -104,7 +111,7 @@ function init() {
 					case "locationList":
 					case "rewardList":
 					case "themeList":
-						pages.push(ui.options.fromPage[0].id);
+						if(pages[pages.length-1] != ui.options.fromPage[0].id) pages.push(ui.options.fromPage[0].id);
 						break;
 				}
 				
@@ -336,16 +343,17 @@ function init() {
 				goBack();
 				break;
 			case "zIn":
-				console.log($(".mapImage").css("zoom"));
-				if($(".mapImage").css("zoom") < 2) $(".mapImage").css("zoom", 0.1 + parseFloat($(".mapImage").css("zoom")));
+				if(pz.zoom() + 0.25 < 1.6) pz.zoom(0.25 + pz.zoom());
 				break;
 			case "zOut":
-				
-				if($(".mapImage").css("zoom") > 0.5) $(".mapImage").css("zoom", $(".mapImage").css("zoom") - 0.1);
+				if(pz.zoom() - 0.25 > 0.24) pz.zoom(pz.zoom() - 0.25);
 				break;
 			case "close":
 				closePopups();
 				onboarding = 3;
+				break;
+			case "taskClose":
+				$(":mobile-pagecontainer").pagecontainer("change", "#location", {changeHash: false});
 				break;
 		}
 
@@ -435,6 +443,19 @@ function closePopups() {
 	$(".pop_onboard").hide();
 	$(".pop_congrats").hide();
 	
+}
+
+function onZoom(){
+	if(pz.zoom() > 1.4){
+		$("#zIn").addClass("disable");
+	}else{
+		$("#zIn").removeClass("disable");
+	}
+	if(pz.zoom() < 0.26){
+		$("#zOut").addClass("disable");
+	}else{
+		$("#zOut").removeClass("disable");
+	}
 }
 
 function showTaskList(){
@@ -699,10 +720,12 @@ function SetTask(){
 		break;
 		case "6.1":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <div class='cardGame'> <div class='card'> <div class='cardFront task6 p1'> <div class='cardBack '></div> </div> </div> <div class='card'> <div class='cardFront task6 p2'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p3'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p4'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p5'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p6'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p7'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p8'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p1'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p2'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p3'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p4'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p5'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p6'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p7'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task6 p8'> <div class='cardBack'></div> </div> </div> </div> </div>");
-		break;
+			initPairs();
+			break;
 		case "7.0":
-			$(".page_taskContent").html("<div class='cameraView'></div> <div class='glassOverlay'> <div class='backTask'> <div class='buttonIcon iconClose iRotate' id='closeTask'></div> </div> </div>");
-		break;
+			$(".page_taskContent").html("<video class='cameraView' playsinline autoplay></video><div class='glassOverlay'> <div class='backTask'> <div class='buttonIcon iconClose iRotate' id='closeTask'></div> </div> </div>");
+			initGlass();
+			break;
 		case "8.0":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Here are some instructions to find the right place to view the images. I'm here to help!<br><br>When you're in the right place, use the 'I'm ready' button to see the image from the past.</p> </div> <div class='speechBubble2 white rot5A'> <h6>1. Move to Ross Castle</h6> <p>Take care when crossing any roads!</p> </div> <div class='speechBubble2 white rot5'> <h6>2. Walk to the top of Ross Castle</h6> <p>The sea should be on your right</p> </div> <div class='speechBubble2 white nopad rot5A'> <img src='ui/ar/Cliff/guide.png' alt='guide image' class='guideImage'> </div> <div class='speechBubble2 white rot5'> <h6>3. Check your position</h6> <p>If your view looks like the one pictured, then you're ready! Touch the button to continue.</p> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>I'm ready!</h2> </div> </div>");
 			$(".page_taskContent2").html("<div class='cameraView'></div> <div class='cameraGuide task8'> <div class='cameraOld task8'></div> </div> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose iRotate' id='closeTask'></div> </div> </div>");
@@ -715,7 +738,8 @@ function SetTask(){
 		break;
 		case "12.0":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <div class='cardGame'> <div class='card'> <div class='cardFront task12 p1'> <div class='cardBack '></div> </div> </div> <div class='card'> <div class='cardFront task12 p2'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p3'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p4'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p5'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p6'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p7'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p8'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p1'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p2'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p3'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p4'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p5'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p6'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p7'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p8'> <div class='cardBack'></div> </div> </div> </div> </div>");
-		break;
+			initPairs();
+			break;
 		case "13.0":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Here are some instructions to find the right place to view the images. I'm here to help!<br><br>When you're in the right place, use the 'I'm ready' button to see the image from the past.</p> </div> <div class='speechBubble2 white rot5A'> <h6>1. Move to the car park</h6> <p>Take care when crossing any roads!</p> </div> <div class='speechBubble2 white rot5'> <h6>2. Face the rear of the leisure centre</h6> <p>The sea should be on your right</p> </div> <div class='speechBubble2 white nopad rot5A'> <img src='ui/ar/Pool/guide.png' alt='guide image' class='guideImage'> </div> <div class='speechBubble2 white rot5'> <h6>3. Check your position</h6> <p>If your view looks like the one pictured, then you're ready! Touch the button to continue.</p> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>I'm ready!</h2> </div> </div>");
 			$(".page_taskContent2").html("<div class='cameraView'></div> <div class='cameraGuide task13'> <div class='cameraOld task13'></div> </div> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose iRotate' id='closeTask'></div> </div> </div>");
@@ -762,6 +786,70 @@ function SetTask(){
 	});
 }
 
+function initGlass(){
+	$(".glassOverlay").hide();
+	if(navigator && navigator.mediaDevices){
+    	const options = { audio: false, video: { facingMode: "user", width: 200, height: 200  } }
+		navigator.mediaDevices.getUserMedia(options)
+		.then(function(stream) {
+			var video = document.querySelector('.cameraView');
+			video.srcObject = stream;
+			video.onloadedmetadata = function(e) {
+			video.play();
+			};
+		})
+		.catch(function(err) {
+			//Handle error here
+		});
+	}else{
+		console.log("camera API is not supported by your browser")
+	}
+}
+
+function initPairs(){
+	gameCount = 0;
+	gameScore = 0;
+	gameData = "";
+	$(".cardFront").removeClass("p1 p2 p3 p4 p5 p6 p7 p8")
+	var cards = $(".card").toArray();
+	shuffle(cards);
+	var cnt = 1;
+	for(var a = 0; a < cards.length; a++){
+		$(cards[a]).children(".cardFront").addClass("p"+cnt);
+		$(cards[a]).attr("id","p"+cnt);
+		cnt++
+		if(cnt > 8) cnt = 1;
+	}
+
+	$(".card").click(function () {
+		if($(this).hasClass(".selected") == false && $(this).hasClass(".correct") == false){
+			$(".card.incorrect").find(".cardBack").show();
+			$(".card").removeClass("incorrect");
+			$(this).addClass("selected")
+			$(this).find(".cardBack").hide();
+			if(gameData == ""){
+				gameData = $(this).attr("id");
+
+			}else{
+				if(this.id == gameData){
+					gameScore++;
+					$(".card.selected").addClass("correct");
+					playFX("correct");
+				}else{
+					$(".card.selected").addClass("incorrect");
+					playFX("wrong");
+				}
+				gameData = "";
+				$(".card").removeClass("selected");
+				if(gameScore == 8){
+					setTimeout(taskComplete, 1000);
+				}
+			}
+		}
+		
+	});
+}
+
 function startCompass() {
   if (isIOS()) {
     DeviceOrientationEvent.requestPermission()
@@ -769,7 +857,7 @@ function startCompass() {
         if (response === "granted") {
           window.addEventListener("deviceorientation", handler, true);
         } else {
-          alert("Device orientation has to be allowed!");
+          //alert("Device orientation has to be allowed!");
         }
       })
       .catch(() => alert("Device orientation not supported"));
@@ -800,8 +888,15 @@ function getLocation() {
 
 function showPosition(position) {
 	if(currentPage == "map"){
-		alert( "Latitude: " + position.coords.latitude +
-  		"\nLongitude: " + position.coords.longitude);
+		if(position.coords.latitude > 53.553611 && position.coords.latitude < 53.557222 && position.coords.longitude > -0.045556 && position.coords.longitude < -0.001389){
+			var lat =  (53.553611 - position.coords.latitude)*1134311.82;
+			$(".compassPoint").css("left", lat + "px");
+
+			var lon =  (-0.045556 -position.coords.longitude)*92738.92;
+			$(".compassPoint").css("top", lon + "px");
+
+		}
+		
 	}
   
 }

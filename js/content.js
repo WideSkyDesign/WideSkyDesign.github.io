@@ -124,7 +124,7 @@ var json =
 			"AnswerA": "Prince Albert Victor",
 			"AnswerB": "Prince Harry",
 			"AnswerC": "Prince Albert",
-			"AnswerD": "The Artist Formerly Known as Prince",
+			"AnswerD": "Prince",
 			"Correct": "Yes! But sadly Prince Albert Victor never became King. He got sick and died when he was only 28.",
 			"CorrectClip": "video/Ethan/yes.mp4",
 			"CorrectCTA": "Back to The Promenade!",

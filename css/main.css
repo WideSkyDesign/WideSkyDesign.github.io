@@ -263,6 +263,10 @@ img.guideImage {
     background-color: #a3e95e;
 }
 
+.black{
+    background-color: black;
+}
+
 .fish{
     background-image: url('../ui/backgrounds/fish.png');
 }
@@ -357,8 +361,8 @@ img.guideImage {
     height: 75px;
     background-size: cover;
     background-image: url('../ui/Map/here.svg');
-    left: 1050px;
-    top: 800px;
+    left: 0px;
+    top: 0px;
     pointer-events: none;
 }
 
@@ -939,9 +943,6 @@ img.guideImage {
     top: 0;
     left: 0;
     z-index: 998;
-    background-image: url('../ui/ar/view.png');
-    background-position: center center;
-    background-size: cover;
 }
 
 .cameraGuide{
