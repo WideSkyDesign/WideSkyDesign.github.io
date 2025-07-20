@@ -263,10 +263,6 @@ img.guideImage {
     background-color: #a3e95e;
 }
 
-.black{
-    background-color: black;
-}
-
 .fish{
     background-image: url('../ui/backgrounds/fish.png');
 }
@@ -955,7 +951,7 @@ img.guideImage {
     z-index: 999;
     background-position: center center;
     background-size: cover;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .cameraOld{
@@ -974,7 +970,8 @@ img.guideImage {
     background-image: url('../ui/ar/overlay.svg');
     background-size: cover;
     background-position: center center;
-    z-index: 1000; 
+    z-index: 1000;
+    pointer-events: none;
 }
 
 .glassOverlay{
@@ -989,12 +986,33 @@ img.guideImage {
     z-index: 1000; 
 }
 
+.instructionHolder{
+    rotate: -90deg;
+    position: fixed;
+    top: 100%;
+    left: 10%;
+    width: 100vh;
+    transform-origin: left top;
+}
+
+.background{
+    height: 200vh;
+    width: 200vw;
+    overflow: hidden;
+    position: fixed;
+}
+
 .rnd{
     border-radius: 30px;
 }
 
 .noclick{
     pointer-events: none;
+}
+
+.black{
+    background-color: black;
+    background-image: none;
 }
 
 .nopad{

@@ -368,7 +368,7 @@ var json =
 			"Activity": [
 				{
 					"Title": "Climb Cliff Gardens",
-					"Intro": "Cliff Gardens has changed a lot since it was first built in 18xx.<br><br>Use your device camera to see what this location looked like in the past! ",
+					"Intro": "Cliff Gardens has changed a lot since it was first built in the 1800s.<br><br>Use your device camera to see what this location looked like in the past! ",
 					"Feedback": "Well done! How cool to be able to look back into the past. Which parts of Cliff Gardens have changed? What has stayed the same?",
 					"FeedbackClip": "video/Archie/well_done.mp4",
 					"CTA": "Look at the past!",
@@ -524,7 +524,7 @@ var json =
 				{
 					"Title": "In the swim",
 					"Intro": "Sadly, the bathing pool is no longer here. But we can still see what it was like!<br><br>Match the camera view to the guide image and see the bathing pool in all its former glory.",
-					"Feedback": "Well done! How amazing to be able to look back into the past. The old image is from 19XX. Their swimming costumes are nothing like today's!<br><br>The bathing pool was very popular until it closed because of storm damage in 1981.",
+					"Feedback": "Well done! How amazing to be able to look back into the past. Their swimming costumes are nothing like today's!<br><br>The bathing pool was very popular until it closed because of storm damage in 1981.",
 					"FeedbackClip": "video/Archie/well_done.mp4",
 					"CTA": "Let's go!",
 					"Theme": "LF",

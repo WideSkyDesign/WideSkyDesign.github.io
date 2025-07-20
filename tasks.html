@@ -42,7 +42,10 @@
     </div>
 
     <div data-role='page' id='taskContent_0.1' class='page_taskContent victorianHoliday'>
-        <div class='cameraView'></div>
+        <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+            <a-camera id='camera1' look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 5'> ></a-camera>
+            <a-entity gltf-model='./assets/models/seaside.glb' gps-new-entity-place='latitude: 52.951903; longitude: -1.143857' position='0 -1 0' scale='1 1 1'></a-entity>
+        </a-scene>
         <div class='arOverlay'>
                 <div class='backTask'>
                     <div class='buttonIcon iconClose' id='closeTask'></div>
@@ -296,13 +299,15 @@
         </div>
     </div>
     <div data-role='page' id='taskContent_8.0b' class='page_taskContent climbCliffGardens'>
-        <div class='cameraView'></div>
+        <video class='cameraView' id="camera" playsinline autoplay></video>
         <div class='cameraGuide task8'>
             <div class='cameraOld task8'></div>
         </div>
         <div class='arOverlay'>
                 <div class='backTask'>
+                     <div class='instuctionHolder'><h1>Touch the screen to look into the past!</h1></div>
                     <div class='buttonIcon iconClose iRotate' id='closeTask'></div>
+                   
                 </div>   
         </div>
     </div>
@@ -481,7 +486,7 @@
         </div>
     </div>
      <div data-role='page' id='taskContent_13.0b' class='page_taskContent swimToTheFuture'>
-        <div class='cameraView'></div>
+        <video class='cameraView' id="camera" playsinline autoplay></video>
         <div class='cameraGuide task13'>
             <div class='cameraOld task13'></div>
         </div>

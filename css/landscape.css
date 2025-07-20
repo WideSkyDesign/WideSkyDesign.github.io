@@ -335,13 +335,19 @@ img.instructionImage {
 }
 
 .cameraView{
-    width: 100vh;
-    height: 100vw;
+    width: 100vw;
+    height: 100vh;
+    transform-origin: left top;
     position: fixed;
-    top: 0;
+    top: 100%;
     left: 0;
     z-index: 998;
     object-fit: cover;
+    rotate: -90deg;
+}
+
+.instructionHolder{
+    width: 100vw;
 }
 
 .fishingBack{

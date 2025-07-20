@@ -13,6 +13,7 @@ gameCount = 0;
 gameDate = "";
 loctask = "";
 themeVideo = "",
+modelName = "";
 interval = null,
 isCorrect = false,
 isComplete = false,
@@ -286,8 +287,22 @@ function init() {
 						case "14.0":
 							taskComplete();
 							break;
+						case "7.0":
+							StartCamera();
+							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
+							break;
+						case "8.0":
+						case "13.0":
+							initMatch();
+							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
+							break;
+						case "0.1":
+						case "2.0":
+						case "4.0":
+							$("body").addClass("black");
+							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
+							break;
 						default:
-							initGlass();
 							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
 							break;
 					}
@@ -354,6 +369,7 @@ function init() {
 				onboarding = 3;
 				break;
 			case "taskClose":
+				$("body").removeClass("black");
 				$(":mobile-pagecontainer").pagecontainer("change", "#location", {changeHash: false});
 				break;
 		}
@@ -705,17 +721,20 @@ function SetTask(){
 			$(".page_taskContent").html("<div class='backTask'>/ <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Here are some different types of sea wall to help you build your sand wall. You could try all three and see which one is best!</p> </div> <div class='speechBubble2 white rot5A'> <h6>1 Vertical</h6> <p>This type of sea wall has a flat front facing the sea and is banked up at the back.</p> </div> <div class='speechBubble2 white rot5'> <h6>2 Embankment</h6> <p>This one has mounds on both sides to help support the wall.</p> </div> <div class='speechBubble2 white rot5A'> <h6>3 Irregular</h6> <p>This is made from big pieces, usually stacked low at the front and high at the back. Hint: you could use rocks, shells or driftwood in this wall as well as sand!</p> </div> <div class='speechBubble2 white rot5'> <p> When your sand wall is complete, why not take a picture and share it to your...er...socials? Use the #WatkinWall hashtag to see what others have made.<br><br>How long do you think your sand wall will last? Have a guess. Or start the timer on your phone and see how long it takes before it's washed away. Stop the timer when it's all gone.<br><br>I implore you, though, to watch out for the tide! The sea rushes in very quickly here. </p> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>I did it!</h2> </div> </div>")
 		break;
 		case "0.1":
-			$(".page_taskContent").html("<div class='cameraView'></div> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
-		break;
+			modelName = "seaside.glb";
+			getLocationNow();
+			break;
 		case "2.0":
-			$(".page_taskContent").html("<div class='cameraView'></div> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
-		break;
+			modelName = "arch.glb";
+			getLocationNow();
+			break;
 		case "2.1":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Find a square or rectangular piece of paper. You can use any paper that you can easily fold and cut. Tracing paper or tissue paper is ideal. It doesn't have to be white - you can try different colours. You can use fabric too, as long as you can cut it with scissors.</p> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Snowflake/1.svg' alt='instruction' class='instructionImage'> <h6>1.</h6> <p>Fold one corner up across to form a right triangle.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Snowflake/2.svg' alt='instruction' class='instructionImage'> <h6>2.</h6> <p>Trim the excess paper from the top.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Snowflake/3.svg' alt='instruction' class='instructionImage'> <h6>3.</h6> <p>Fold the bottom corner up along the folded edge.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Snowflake/4.svg' alt='instruction' class='instructionImage'> <h6>4.</h6> <p>Fold the triangle in half with folded edges together</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Snowflake/5.svg' alt='instruction' class='instructionImage'> <h6>5.</h6> <p>Fold the folded edge across to form a cone.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Snowflake/6.svg' alt='instruction' class='instructionImage'> <h6>6.</h6> <p>Trim excess paper from the top.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Snowflake/7.svg' alt='instruction' class='instructionImage'> <h6>7.</h6> <p>Cut shapes from each folded side, cutting all the way from one side to the other ONLY at the top and bottom.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Snowflake/8.svg' alt='instruction' class='instructionImage'> <h6>8.</h6> <p>Carefully open out your snowflake. You can iron it to make it nice and flat. Voila! You have made a snowflake.<br><br>Don't forget to put the waste paper in the recycling!</p> <div class='clear'></div> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>Let it snow!</h2> </div> </div>");
 		break;
 		case "4.0":
-			$(".page_taskContent").html("<div class='cameraView'></div> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
-		break;
+			modelName = "train.glb";
+			getLocationNow();
+			break;
 		case "5.1":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Your task for this location is to think of a story about some of these people. You could make notes on your phone, or if you've got any paper, you could even write it down! Here are some prompts to help you get started.</p> </div> <div class='speechBubble2 white rot5A'> <h6>1. Fisher</h6> <p>A fisher is waiting to go on leave after being at sea for two weeks. They are tired and dirty.</p> </div> <div class='speechBubble2 white rot5'> <h6>2. Pier worker</h6> <p>They have been hard at work loading and unloading cargo from the pier. All they want is to get home and put their feet up!</p> </div> <div class='speechBubble2 white rot5A'> <h6>3. Long journey</h6> <p>This person is seeking a better life in America. They came all the way from Europe and arrived in Cleethorpes at the pier. The train is the next step on their very long journey.</p> </div> <div class='speechBubble2 white rot5'> <h6>4. Holidays</h6> <p>A young family have just had their first bank holiday weekend at Cleethorpes. Did they have fun?</p> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>Completed my story!</h2> </div> </div>");
 		break;
@@ -729,7 +748,7 @@ function SetTask(){
 			break;
 		case "8.0":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Here are some instructions to find the right place to view the images. I'm here to help!<br><br>When you're in the right place, use the 'I'm ready' button to see the image from the past.</p> </div> <div class='speechBubble2 white rot5A'> <h6>1. Move to Ross Castle</h6> <p>Take care when crossing any roads!</p> </div> <div class='speechBubble2 white rot5'> <h6>2. Walk to the top of Ross Castle</h6> <p>The sea should be on your right</p> </div> <div class='speechBubble2 white nopad rot5A'> <img src='ui/ar/Cliff/guide.png' alt='guide image' class='guideImage'> </div> <div class='speechBubble2 white rot5'> <h6>3. Check your position</h6> <p>If your view looks like the one pictured, then you're ready! Touch the button to continue.</p> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>I'm ready!</h2> </div> </div>");
-			$(".page_taskContent2").html("<div class='cameraView'></div> <div class='cameraGuide task8'> <div class='cameraOld task8'></div> </div> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose iRotate' id='closeTask'></div> </div> </div>");
+			$(".page_taskContent2").html("<video class='cameraView' id='camera' playsinline autoplay></video><div class='cameraGuide task8'> <div class='cameraOld task8'></div> </div> <div class='arOverlay'> <div class='backTask'><div class='instructionHolder'><h1>Touch the screen to look into the past!</h1></div> <div class='buttonIcon iconClose iRotate' id='closeTask'></div> </div> </div>");
 			break;
 		case "9.0":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <div class='backPelican'> <div class='pelican open'></div> </div> <div class='basketFood'> <div class='food food1'></div> <div class='food food2'></div> <div class='food food3'></div> <div class='food food4'></div> <div class='food food5'></div> <div class='food food6'></div> <div class='food food7'></div> </div> </div>");
@@ -743,7 +762,7 @@ function SetTask(){
 			break;
 		case "13.0":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Here are some instructions to find the right place to view the images. I'm here to help!<br><br>When you're in the right place, use the 'I'm ready' button to see the image from the past.</p> </div> <div class='speechBubble2 white rot5A'> <h6>1. Move to the car park</h6> <p>Take care when crossing any roads!</p> </div> <div class='speechBubble2 white rot5'> <h6>2. Face the rear of the leisure centre</h6> <p>The sea should be on your right</p> </div> <div class='speechBubble2 white nopad rot5A'> <img src='ui/ar/Pool/guide.png' alt='guide image' class='guideImage'> </div> <div class='speechBubble2 white rot5'> <h6>3. Check your position</h6> <p>If your view looks like the one pictured, then you're ready! Touch the button to continue.</p> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>I'm ready!</h2> </div> </div>");
-			$(".page_taskContent2").html("<div class='cameraView'></div> <div class='cameraGuide task13'> <div class='cameraOld task13'></div> </div> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose iRotate' id='closeTask'></div> </div> </div>");
+			$(".page_taskContent2").html("<video class='cameraView' id='camera' playsinline autoplay></video><div class='cameraGuide task13'> <div class='cameraOld task13'></div> </div> <div class='arOverlay'> <div class='backTask'> <div class='instructionHolder'><h1>Touch the screen to look into the past!</h1></div><div class='buttonIcon iconClose iRotate' id='closeTask'></div> </div> </div>");
 			break;
 		case "14.1":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>I think a good boat should do two things: stay afloat, and sail a long way.<br /><br />Follow the instructions below or make your own.</p> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Boat/paper 01.svg' alt='instruction' class='instructionImage'> <h6>1</h6> <p>Start with a rectangular piece of paper, coloured side up. Fold in half, then open.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Boat/paper 02.svg' alt='instruction' class='instructionImage'> <h6>2</h6> <p>Fold in half downwards.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Boat/paper 03.svg' alt='instruction' class='instructionImage'> <h6>3</h6> <p>Bring corners in to centre line.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Boat/paper 04.svg' alt='instruction' class='instructionImage'> <h6>4</h6> <p>Fold uppermost layer upwards and do the same to the back. Crease well.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Boat/paper 05.svg' alt='instruction' class='instructionImage'> <h6>5</h6> <p>Pull the sides out and flatten.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Boat/paper 06.svg' alt='instruction' class='instructionImage'> <h6>6</h6> <p>Fold front layer up to top, and do the same to the back.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Boat/paper 07.svg' alt='instruction' class='instructionImage'> <h6>7</h6> <p>Pull the sides outwards and flatten.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Boat/paper 08.svg' alt='instruction' class='instructionImage'> <h6>8</h6> <p>Gently pull the top parts of the model outwards, making a boat shape.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Boat/paper 09.svg' alt='instruction' class='instructionImage'> <h6>9</h6> <p>Flatten well to crease all folds. Then open out slightly, forming a boat shape.</p> <div class='clear'></div> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>Sail your boats!</h2> </div> </div>");
@@ -760,7 +779,9 @@ function SetTask(){
 		switch(locTask){
 			case "8.0":
 			case "13.0":
+				$("body").addClass("black");
 				$(":mobile-pagecontainer").pagecontainer("change", "#taskContent2", {changeHash: false});
+				StartCamera();
 			break;
 			default:
 				taskComplete();
@@ -787,26 +808,21 @@ function SetTask(){
 	});
 }
 
-function initGlass(){
-	$(".glassOverlay").hide();
+function initMatch(){
+
+	$(".cameraOld").hide();
+	$(".cameraGuide").click(function () {
+		$(".cameraOld").show();
+		$(".cameraGuide").animate({opacity: 1}, 1000);
+		$(".instructionHolder").hide();
+		$(".cameraGuide").css("background-image", "none");
+	});
+}
+
+function StartCamera(){
+	$("body").addClass("black");
 	if(navigator && navigator.mediaDevices){
     	const options = { audio: false, video: { facingMode: "environment", width: 1920, height: 1080  } }
-		/*const constraints = {
-		audio: false,
-		video: {
-			facingMode: "environment",
-			width: {
-			min: 1280,
-			ideal: 1920,
-			max: 2560,
-			},
-			height: {
-			min: 720,
-			ideal: 1080,
-			max: 1440,
-			},
-		},
-		}*/
 		navigator.mediaDevices.getUserMedia(options)
 		.then(function(stream) {
 			var video = document.getElementById('camera');
@@ -920,6 +936,29 @@ function showPosition(position) {
 
 function error() {
   $(".meIcon").hide();
+}
+
+function getLocationNow() {
+	
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(positionNow, errorNow);
+  } else {
+    $(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
+	
+  }
+}
+
+function positionNow(position) {
+	var lat =  position.coords.latitude + 0.00005;
+	var lon =  position.coords.longitude + 0.00005;
+	console.log("'latitude: " + lat + "; longitude: " + lon +"'");
+	var str = "'latitude: " + lat + "; longitude: " + lon +"'";
+	$(".page_taskContent").html("<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'> <a-camera id='camera1' look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 5'> ></a-camera> <a-entity gltf-model='./assets/models/" + modelName + "' gps-new-entity-place=" + str+ "position='0 -1 0' scale='1 1 1'></a-entity> </a-scene> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
+		
+}
+
+function errorNow() {
+	 $(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
 }
 
 function isIOS() {
