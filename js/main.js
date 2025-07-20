@@ -251,6 +251,7 @@ function init() {
 		$("audio.watkinCircle")[0].pause();
 		switch ($.mobile.pageContainer.pagecontainer('getActivePage').attr('id')) {
 			case "splash":
+				getLocation();
 				startCompass();
 				$(":mobile-pagecontainer").pagecontainer("change", "#landing", {changeHash: false});
 				break;
@@ -790,19 +791,23 @@ function handler(e) {
 
 function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(success, error);
+	$(".meIcon").show();
+    navigator.geolocation.watchPosition(showPosition, error);
   } else {
-    
+    $(".meIcon").hide();
   }
 }
 
-function success(position) {
-  alert( "Latitude: " + position.coords.latitude +
-  "\nLongitude: " + position.coords.longitude);
+function showPosition(position) {
+	if(currentPage == "map"){
+		alert( "Latitude: " + position.coords.latitude +
+  		"\nLongitude: " + position.coords.longitude);
+	}
+  
 }
 
 function error() {
-  alert("Sorry, no position available.");
+  $(".meIcon").hide();
 }
 
 function isIOS() {
