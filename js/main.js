@@ -31,7 +31,8 @@ function init() {
 	console.log("init ready! " + window.innerWidth + " , " + window.innerHeight);
 	$(".topMenu").hide();
 	closePopups();
-	$(".mapImage").css("zoom", 1);
+	
+	//$(".mapImage").css("zoom", 1);
 
 	$(":mobile-pagecontainer").on("pagecontainerchange", function (event, ui) {
 		currentPage = ui.toPage[0].id;
@@ -43,6 +44,10 @@ function init() {
 				$("audio.watkinCircle")[0].load();
 			break;
 			case "map":
+				var pz = PinchZoomer.get("pz1");
+				pz.x(-990);
+				pz.y(-340);
+				//console.log("x " + pz.x() + " y " + pz.y() + " zoom " + pz.zoom());
 				//$(".mapContainer").scrollLeft(2200);
 				//$(".mapContainer").scrollTop(1000);
 			break;
@@ -334,6 +339,7 @@ function init() {
 				if($(".mapImage").css("zoom") < 2) $(".mapImage").css("zoom", 0.1 + parseFloat($(".mapImage").css("zoom")));
 				break;
 			case "zOut":
+				
 				if($(".mapImage").css("zoom") > 0.5) $(".mapImage").css("zoom", $(".mapImage").css("zoom") - 0.1);
 				break;
 			case "close":
@@ -777,8 +783,26 @@ function handler(e) {
   		//alert("Compass heading: " + compass);
  		 //$(".compassPoint").style.transform = `translate(-50%, -50%) rotate(${-compass}deg)`;
 		 $(".compassPoint").css("rotate", compass + "deg");
+		 getLocation();
 	}
   
+}
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else {
+    
+  }
+}
+
+function success(position) {
+  alert( "Latitude: " + position.coords.latitude +
+  "\nLongitude: " + position.coords.longitude);
+}
+
+function error() {
+  alert("Sorry, no position available.");
 }
 
 function isIOS() {
