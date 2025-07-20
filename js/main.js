@@ -1,4 +1,5 @@
 var pages = [],
+currentPage = "",
 currentTheme = "",
 currentLocation = 0,
 currentTask = 0,
@@ -33,7 +34,7 @@ function init() {
 	$(".mapImage").css("zoom", 1);
 
 	$(":mobile-pagecontainer").on("pagecontainerchange", function (event, ui) {
-		
+		currentPage = ui.toPage[0].id;
 		switch (ui.toPage[0].id) {
 			case "landing":
 				$(".page_landing video.wait")[0].pause();
@@ -771,9 +772,13 @@ function startCompass() {
 }
 
 function handler(e) {
-  compass = e.webkitCompassHeading || Math.abs(e.alpha - 360);
-  alert("Compass heading: " + compass);
-  $(".compassPoint").style.transform = `translate(-50%, -50%) rotate(${-compass}deg)`;
+	if(currentPage == "map"){
+		compass = e.webkitCompassHeading || Math.abs(e.alpha - 360);
+  		//alert("Compass heading: " + compass);
+ 		 //$(".compassPoint").style.transform = `translate(-50%, -50%) rotate(${-compass}deg)`;
+		 $(".compassPoint").css("rotate", compass + "deg");
+	}
+  
 }
 
 function isIOS() {
