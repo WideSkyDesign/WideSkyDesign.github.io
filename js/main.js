@@ -245,6 +245,7 @@ function init() {
 		$("audio.watkinCircle")[0].pause();
 		switch ($.mobile.pageContainer.pagecontainer('getActivePage').attr('id')) {
 			case "splash":
+				startCompass();
 				$(":mobile-pagecontainer").pagecontainer("change", "#landing", {changeHash: false});
 				break;
 			case "landing":
@@ -328,7 +329,6 @@ function init() {
 				goBack();
 				break;
 			case "zIn":
-				startCompass();
 				console.log($(".mapImage").css("zoom"));
 				if($(".mapImage").css("zoom") < 2) $(".mapImage").css("zoom", 0.1 + parseFloat($(".mapImage").css("zoom")));
 				break;
@@ -755,17 +755,16 @@ function SetTask(){
 }
 
 function startCompass() {
-	alert("Please allow access to your device orientation to use the compass feature. " + isIOS());
   if (isIOS()) {
     DeviceOrientationEvent.requestPermission()
       .then((response) => {
         if (response === "granted") {
           window.addEventListener("deviceorientation", handler, true);
         } else {
-          alert("has to be allowed!");
+          alert("Device orientation has to be allowed!");
         }
       })
-      .catch(() => alert("not supported"));
+      .catch(() => alert("Device orientation not supported"));
   } else {
     window.addEventListener("deviceorientationabsolute", handler, true);
   }
@@ -773,6 +772,7 @@ function startCompass() {
 
 function handler(e) {
   compass = e.webkitCompassHeading || Math.abs(e.alpha - 360);
+  alert("Compass heading: " + compass);
   $(".compassPoint").style.transform = `translate(-50%, -50%) rotate(${-compass}deg)`;
 }
 
