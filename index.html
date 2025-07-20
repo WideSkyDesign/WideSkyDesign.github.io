@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+
+    <link rel="stylesheet" href="js/jquery/mobile/jquery mobile.css" />
+    <link rel="stylesheet" href="js/jquery/mobile/bootstrap.css">
+
+    <link href="css/pinchzoomer.min.css" rel="stylesheet">
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/hammer.min.js" type="text/javascript"></script>
+    <script src="js/TweenMax.min.js" type="text/javascript"></script>
+    <script src="js/jquery.pinchzoomer.min.js" type="text/javascript"></script> 
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/landscape.css">
+    <link rel="stylesheet" href="css/images.css">
+
+    <script type="text/javascript" src="js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery/jqueryui.js"></script>
+    <script src="js/jquery/mobile/jquery mobile.js"></script>
+    <script src="js/jquery/mobile/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery/touchj.js"></script>
+    <script type="text/javascript" src="js/content.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>Watkin Trail</title>
+</head>
+<body class="ui-mobile-viewport ui-overlay-a yellow fish splash">
+
+    <audio class="watkinCircle" autoplay>
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <audio class="audioTask" autoplay>
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <audio class="audioFX" autoplay>
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <div data-role="page" id="splash" class="page_splash">
+        <div class="footer">
+            <div class="buttonCTA white">
+                <h2>Start the app</h2>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="landing" class="page_landing">
+
+        <img src="ui/App header_mobile.png" alt="Watkin on the beach" class="headerImage">
+        <div class="backWatkin blue trains">
+            <video class="watkinCircle" playsinline autoplay loop>
+                <source src="video/Watkin_blue.mp4" type="video/mp4">
+            </video>
+            <img src="ui/Yellow question start.svg" alt="speach start" class="speechStart">
+            <div class="speechBubble yellow">
+                <p>Ladies, gentlemen and especially the young folk. Edward Watkin esquire (soon to be Sir Edward) at your service. They called me the Railway King. For reasons I am too modest to explain here. But let me just say that it was I that brought the railway to Cleethorpes.<br><br>So, what are we doing on the Beach? Read on, and all will be revealed.</p>
+            </div>
+        </div>
+        <div class="backPresenter">
+            <video class="presenterCircle wait" playsinline autoplay>
+                <source src="video/intro CTA_280-003_dark blue_280.mp4" type="video/mp4">
+            </video>
+            <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+            <div class="speechBubble white">
+                <p>Hi. Try these fun ways to find out more about Cleethorpes.<br><br>Let's start digging!</p>
+            </div>
+            <div class="buttonCTA white">
+                <h2>Begin the exploration</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="topMenu white">
+        <div class="buttonIcon iconBack" id="back"></div>
+        <div class="buttonIcon iconMenu" id="menu"></div>
+        <div class="title">
+            <h1>Page Title</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="map" class="page_map">
+
+        <div class="mapContainer">
+            <div class="mapImage" data-elem="pinchzoomer" data-options="adjustHolderSize:false; scaleMode:none; maxZoom:1.5; minZoom:0.25; dragStep:20;">
+                <div class="toiletIcon" id="wc_0"></div>
+                <div class="toiletIcon" id="wc_1"></div>
+                <div class="toiletIcon" id="wc_2"></div>
+                <div class="mapIcon mapNGU" id="map_0"></div>
+                <div class="mapIcon starthere" id="map_0_b"></div>
+                <div class="mapIcon mapDBTB" id="map_1"></div>
+                <div class="mapIcon mapMC" id="map_2"></div>
+                <div class="mapIcon mapLF" id="map_3"></div>
+                <div class="mapIcon mapMC" id="map_4"></div>
+                <div class="mapIcon mapNGU" id="map_5"></div>
+                <div class="mapIcon mapDBTB" id="map_6"></div>
+                <div class="mapIcon mapDBTB" id="map_7"></div>
+                <div class="mapIcon mapLF" id="map_8"></div>
+                <div class="mapIcon mapDBTB" id="map_9"></div>
+                <div class="mapIcon mapNGU" id="map_10"></div>
+                <div class="mapIcon mapLF" id="map_11"></div>
+                <div class="mapIcon mapNGU" id="map_12"></div>
+                <div class="mapIcon mapLF" id="map_13"></div>
+                <div class="mapIcon mapLF" id="map_14"></div>
+                <div class="mapIcon mapLF" id="map_15"></div>
+                <div class="mapIcon mapMC" id="map_16"></div>
+                <div class="mapIcon mapNGU" id="map_17"></div>
+                <div class="meIcon" id="map_me"></div>
+            </div>
+        </div>
+        <div class="footer noclick">
+
+            <div class="compass">
+                 <div class="gull"></div>
+                <div class="compassFace">
+                    <div class="compassPoint"></div>
+                </div>
+               
+            </div>
+            <div class="buttonIcon iconZoomIn" id="zIn"></div>
+            <div class="buttonIcon iconZoomOut" id="zOut"></div>
+            <div class="buttonIcon iconFilter" id="filter"></div>
+        </div>
+    </div>
+
+    <div data-role="page" id="locationIntro" class="page_locationIntro">
+        <img src="ui/Beach Header.png" alt="Watkin on the beach" class="headerImage">
+        <div class="backWatkin">
+            <video class="watkinCircle" playsinline autoplay loop>
+                <source src="video/Watkin_darkblue.mp4" type="video/mp4">
+            </video>
+            <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+            <div class="speechBubble white">
+                <p>Ah, there you are. As you can see, we are on The Beach. Before we start, I have a small task for you.<br /><br />When you finish it, you'll get your first badge.</p>
+            </div>
+            <div class="buttonCTA white">
+                <h2>Begin the task</h2>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="location" class="page_location">
+        <img src="ui/Beach Header.png" alt="Watkin on the beach" class="headerImage">
+        <div class="backWatkin">
+            <video class="watkinCircle" playsinline autoplay loop>
+                <source src="video/Watkin_blue.mp4" type="video/mp4">
+            </video>
+            <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+            <div class="speechBubble white">
+                <p>Ah, the seaside! Good for the health. Good for the spirits. Good for the people of Grimsby. And beyond. This could be a most popular resort. Look around at this wonderful beach. Enjoy the sea air. The fine views. The bracing sea. Nothing beats a walk along the beach to clear the mind. Away from school and the working day. It's the perfect place to dream and scheme. In a good way, of course. </p>
+            </div>
+
+        </div>
+        <div class="iconBar blue">
+            <div class="buttonIcon iconDBTB"></div>
+            <div class="buttonIcon iconLF"></div>
+            <div class="buttonIcon iconMC"></div>
+            <div class="buttonIcon iconNGU"></div>
+        </div>
+        <div class="backPresenter">
+            <video class="presenterCircle wait" playsinline autoplay>
+                <source src="video/Activity reminder_280-003_blue_280.mp4" type="video/mp4">
+            </video>
+            <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+            <div class="speechBubble white">
+                <p>There are lots of fun things to do at The Beach</p>
+            </div>
+        </div>
+        <div class="TaskList">
+            <div class="buttonTask rot5A" id="task_0">
+                <div class="cover rnd">
+                    <h4>Task Title</h4>
+                    <div class="buttonIcon iconDBTB floatRight"></div>
+                </div>
+            </div>
+            <div class="buttonTask rot5" id="task_1">
+                <div class="cover rnd">
+                    <h4>Task Title</h4>
+                    <div class="buttonIcon iconDBTB floatRight"></div>
+                </div>
+            </div>
+            <div class="buttonTask rot5A" id="task_2">
+                <div class="cover rnd">
+                    <h4>Task Title</h4>
+                    <div class="buttonIcon iconDBTB floatRight"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="taskIntro" class="page_taskIntro">
+
+        <img src="ui/Beach Header.png" alt="Watkin on the beach" class="headerImage">
+        <div class="backWatkin">
+            <video class="watkinCircle" playsinline autoplay loop>
+                <source src="video/Watkin_yellow.mp4" type="video/mp4">
+            </video>
+            <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+            <div class="speechBubble white">
+                <p>There's nothing quite like a promenade stroll. Leave your daily cares behind, for a little while at least. In my day, it was the place to see and be seen. But it's not just about parading your finery. The promenade has a serious practical purpose too. See how it runs all the way along the beach? That helps preserve the Cleethorpes coastline and get people safely on and off the sand. Now, I have a difficult task for you: to build the longest-lasting sand wall you possibly can. But don't worry, I'll help you. </p>
+            </div>
+            <div class="buttonCTA white beginTask">
+                <h2>Begin the task</h2>
+            </div>
+            <div class="audioBar footer blue">
+                <div class="buttonAudio yellow">
+                    <div class="menuIcon playButton"></div>
+                    <div class="progressBack blue">
+                        <div class="progressBar white"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="themeList" class="page_themeList">
+        <div class="menuList">
+            <div class="buttonTheme white rot5A" id="DBTB">
+                <div class="themeCircle DBTB3"></div>
+                <h5>Dream Big, Think Big</h5>
+                <p class="smallP">Watkin had big ideas and worked hard to make them happen.</p>
+            </div>
+            <div class="buttonTheme white rot5" id="LF">
+                <div class="themeCircle LF3"></div>
+                <h5>Look Forward</h5>
+                <p class="smallP">Watkin got the right people together at the right time.</p>
+            </div>
+            <div class="buttonTheme white rot5A" id="MC">
+                <div class="themeCircle MC3"></div>
+                <h5>Make Connections</h5>
+                <p class="smallP">Watkin never let a setback get in his way - he kept going.</p>
+            </div>
+            <div class="buttonTheme white rot5" id="NGU">
+                <div class="themeCircle NGU3"></div>
+                <h5>Never Give Up</h5>
+                <p class="smallP">Watkin's vision was built to last, for future generations.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="themeIntro" class="page_themeIntro">
+        <div class="backPresenter">
+            <video class="presenterCircle" autoplay playsinline>
+                <source src="" type="video/mp4">
+            </video>
+            <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+            <div class="speechBubble white">
+                <p>We can all dream. But how do you turn dreams into reality? Watkin had brilliant ideas. He also made things happen. He could see the bigger picture. That's the tricky part. </p>
+            </div>
+            <div class="buttonCTA white">
+                <h2>View locations</h2>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="rewardList" class="page_rewardList">
+        <div class="menuList">
+            <div class="buttonTheme white rot5A" id="DBTB">
+                <div class="themeCircle t_dbtb"></div>
+                <h5>Dream Big, Think Big</h5>
+                <p class="smallP p_dbtb">You've completed one task. You're thinking big. Keep going!</p>
+            </div>
+            <div class="buttonTheme white rot5" id="LF">
+                <div class="themeCircle t_lf"></div>
+                <h5>Look Forward</h5>
+                <p class="smallP p_lf">Keep going. One more stop and you're there.</p>
+            </div>
+            <div class="buttonTheme white rot5A" id="MC">
+                <div class="themeCircle t_mc"></div>
+                <h5>Make Connections</h5>
+                <p class="smallP p_mc">Excellent! You made it to the end. You didn't give up.</p>
+            </div>
+            <div class="buttonTheme white rot5" id="NGU">
+                <div class="themeCircle t_ngu"></div>
+                <h5>Never Give Up</h5>
+                <p class="smallP p_ngu">Ready for the tasks ahead? Let's get going. No looking back!</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="locationList" class="page_locationList">
+        <div class="menuList">
+            <div class="buttonLocation white rot5A" id="loc_0">
+                <div class="locationCircle loc0"></div>
+                <h5>The Beach</h5>
+                <p class="smallP">Cleethorpe has a long, sandy beach enjoyed by holidaymakers.</p>
+            </div>
+            <div class="buttonLocation white rot5" id="loc_1">
+                <div class="locationCircle loc1"></div>
+                <h5>Dolphin Hotel</h5>
+                <p class="smallP">The Dolphin Hotel was Cleethorpes' most well-known hotel.</p>
+            </div>
+            <div class="buttonLocation white rot5A" id="loc_2">
+                <div class="locationCircle loc2"></div>
+                <h5>Promenade</h5>
+                <p class="smallP">The spacious Promenade was built above the Sea Wall in 1885.</p>
+            </div>
+            <div class="buttonLocation white rot5" id="loc_3">
+                <div class="locationCircle loc3"></div>
+                <h5>Sea Wall</h5>
+                <p class="smallP">The Sea Wall was built to protect the Cleethorpes coastline.</p>
+            </div>
+            <div class="buttonLocation white rot5A" id="loc_4">
+                <div class="locationCircle loc4"></div>
+                <h5>Railway Station</h5>
+                <p class="smallP">The Railway Station has welcomed millions of holidaymakers.</p>
+            </div>
+            <div class="buttonLocation white rot5" id="loc_5">
+                <div class="locationCircle loc5"></div>
+                <h5>Mermaid Cafe</h5>
+                <p class="smallP">The Mermaid Café was once the Railway Station waiting room.</p>
+            </div>
+            <div class="buttonLocation white rot5A" id="loc_6">
+                <div class="locationCircle loc6"></div>
+                <h5>Empire Theatre</h5>
+                <p class="smallP">The Empire has had many different uses through the years.</p>
+            </div>
+            <div class="buttonLocation white rot5" id="loc_7">
+                <div class="locationCircle loc7"></div>
+                <h5>The Pier</h5>
+                <p class="smallP">The Pier was the heart of Cleethorpes' seaside entertainment.</p>
+            </div>
+            <div class="buttonLocation white rot5A" id="loc_8">
+                <div class="locationCircle loc8"></div>
+                <h5>Cliff Gardens</h5>
+                <p class="smallP">Winding paths lead through Cliff Gardens up to Ross Castle.</p>
+            </div>
+            <div class="buttonLocation white rot5" id="loc_9">
+                <div class="locationCircle loc9"></div>
+                <h5>Grotto Cafe</h5>
+                <p class="smallP">The Grotto Café was a popular stopping place on the sea front.</p>
+            </div>
+            <div class="buttonLocation white rot5A" id="loc_17">
+                <div class="locationCircle loc17"></div>
+                <h5>Ross Castle</h5>
+                <p class="smallP">When is a castle not a castle?</p>
+            </div>
+            <div class="buttonLocation white rot5" id="loc_10">
+                <div class="locationCircle loc10"></div>
+                <h5>Alexandra Road</h5>
+                <p class="smallP">Alexandra Road has fine villas with wrought iron balconies.</p>
+            </div>
+            <div class="buttonLocation white rot5A" id="loc_11">
+                <div class="locationCircle loc11"></div>
+                <h5>Fish Hatchery</h5>
+                <p class="smallP">The Fish Hatchery was Watkin's idea to conserve fish stocks.</p>
+            </div>
+            <div class="buttonLocation white rot5" id="loc_12">
+                <div class="locationCircle loc12"></div>
+                <h5>Coliseum Picture Theatre</h5>
+                <p class="smallP">The Coliseum was one of Cleethorpes' most popular cinemas.</p>
+            </div>
+            <div class="buttonLocation white rot5A" id="loc_13">
+                <div class="locationCircle loc13"></div>
+                <h5>Kingsway Bathing Pool</h5>
+                <p class="smallP">Cleethorpes Bathing Pool was once the UK's biggest outdoor pool.</p>
+            </div>
+            <div class="buttonLocation white rot5" id="loc_14">
+                <div class="locationCircle loc14"></div>
+                <h5>Light Railway</h5>
+                <p class="smallP">The Light Railway runs with restored miniature steam engines.</p>
+            </div>
+            <div class="buttonLocation white rot5A" id="loc_15">
+                <div class="locationCircle loc15"></div>
+                <h5>Recycling Sculpture</h5>
+                <p class="smallP">The three Recycling Sculptures help to keep the seafront clean.</p>
+            </div>
+            <div class="buttonLocation white rot5" id="loc_16">
+                <div class="locationCircle loc16"></div>
+                <h5>The Fitties</h5>
+                <p class="smallP">The Fitties are home to many birds, year-round and temporary.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div data-role="page" id="help" class="page_help">
+        <img src="ui/Beach Header.png" alt="Watkin on the beach" class="headerImage">
+        <div class="backWatkin">
+            <video class="watkinCircle" playsinline autoplay loop>
+                <source src="video/Watkin_blue.mp4" type="video/mp4">
+            </video>
+            <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+            <div class="speechBubble white">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt metus eu lacus placerat, nec ornare odio tempus.<br><br>Nullam nisi purus, pulvinar egestas quam sit amet, dapibus congue nisi. Integer magna tortor, condimentum a vehicula eget, ultricies eu nibh. Vestibulum vel ligula at eros cursus dignissim. Nunc at felis sollicitudin, convallis sem ac, pretium dolor.<br><br>Mauris vel massa sit amet libero lobortis lobortis suscipit pellentesque neque. In vehicula dapibus pharetra. Donec non ultrices nisi. Vestibulum in elit finibus, hendrerit magna at, pretium sem.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="about" class="page_about">
+        <img src="ui/Beach Header.png" alt="Watkin on the beach" class="headerImage">
+        <div class="backWatkin">
+            <video class="watkinCircle" playsinline autoplay loop>
+                <source src="video/Watkin_darkblue.mp4" type="video/mp4">
+            </video>
+            <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+            <div class="speechBubble white">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt metus eu lacus placerat, nec ornare odio tempus.</p>
+            </div>
+            <div class="speechBubble2 white">
+                <p>Nullam nisi purus, pulvinar egestas quam sit amet, dapibus congue nisi. Integer magna tortor, condimentum a vehicula eget, ultricies eu nibh. Vestibulum vel ligula at eros cursus dignissim. Nunc at felis sollicitudin, convallis sem ac, pretium dolor.<br><br>Mauris vel massa sit amet libero lobortis lobortis suscipit pellentesque neque. In vehicula dapibus pharetra. Donec non ultrices nisi. Vestibulum in elit finibus, hendrerit magna at, pretium sem.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="contact" class="page_contact">
+        <img src="ui/Beach Header.png" alt="Watkin on the beach" class="headerImage">
+        <div class="backWatkin">
+            <video class="watkinCircle" playsinline autoplay loop>
+                <source src="video/Watkin_blue.mp4" type="video/mp4">
+            </video>
+            <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+            <div class="speechBubble white">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt metus eu lacus placerat, nec ornare odio tempus.<br><br>Nullam nisi purus, pulvinar egestas quam sit amet, dapibus congue nisi. Integer magna tortor, condimentum a vehicula eget, ultricies eu nibh. Vestibulum vel ligula at eros cursus dignissim. Nunc at felis sollicitudin, convallis sem ac, pretium dolor.<br><br>Mauris vel massa sit amet libero lobortis lobortis suscipit pellentesque neque. In vehicula dapibus pharetra. Donec non ultrices nisi. Vestibulum in elit finibus, hendrerit magna at, pretium sem.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="credits" class="page_credits">
+        <img src="ui/Beach Header.png" alt="Watkin on the beach" class="headerImage">
+        <div class="backWatkin">
+            <video class="watkinCircle" playsinline autoplay loop>
+                <source src="video/Watkin_darkblue.mp4" type="video/mp4">
+            </video>
+            <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+            <div class="speechBubble white">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt metus eu lacus placerat, nec ornare odio tempus.</p>
+            </div>
+            <div class="speechBubble2 white">
+                <p>Nullam nisi purus, pulvinar egestas quam sit amet, dapibus congue nisi. Integer magna tortor, condimentum a vehicula eget, ultricies eu nibh. Vestibulum vel ligula at eros cursus dignissim. Nunc at felis sollicitudin, convallis sem ac, pretium dolor.</p>
+            </div>
+            <div class="speechBubble2 white">
+                <p>Mauris vel massa sit amet libero lobortis lobortis suscipit pellentesque neque. In vehicula dapibus pharetra. Donec non ultrices nisi. Vestibulum in elit finibus, hendrerit magna at, pretium sem.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="resources" class="page_resources">
+        <div class="menuList">
+            <div class="buttonResource white rot5A" id="res_0">
+                <div class="locationCircle loc0"></div>
+                <h5>Resource 1 Title</h5>
+                <p class="smallP">talk about what the resource is for.</p>
+            </div>
+            <div class="buttonResource white rot5" id="res_1">
+                <div class="locationCircle loc0"></div>
+                <h5>Resource 2 Title</h5>
+                <p class="smallP">talk about what the resource is for.</p>
+            </div>
+            <div class="buttonResource white rot5A" id="res_2">
+                <div class="locationCircle loc0"></div>
+                <h5>Resource 3 Title</h5>
+                <p class="smallP">talk about what the resource is for.</p>
+            </div>
+            <div class="buttonResource white rot5" id="res_3">
+                <div class="locationCircle loc0"></div>
+                <h5>Resource 4 Title</h5>
+                <p class="smallP">talk about what the resource is for.</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="menu" class="page_menu">
+        <div class="menuList">
+            <div class="buttonMenu white" id="landing">
+                <div class="menuIcon iconHome"></div>
+                <h1>Home</h1>
+            </div>
+            <div class="buttonMenu white" id="map">
+                <div class="menuIcon iconMap"></div>
+                <h1>Map</h1>
+            </div>
+            <div class="buttonMenu white" id="themeList">
+                <div class="menuIcon iconThemes"></div>
+                <h1>Themes</h1>
+            </div>
+            <div class="buttonMenu white" id="locationList">
+                <div class="menuIcon iconLocations"></div>
+                <h1>Locations</h1>
+            </div>
+            <div class="buttonMenu white" id="rewardList">
+                <div class="menuIcon iconRewards"></div>
+                <h1>Rewards</h1>
+            </div>
+            <div class="buttonMenu white disable" id="help">
+                <div class="menuIcon iconHelp"></div>
+                <h1>Help</h1>
+            </div>
+            <div class="buttonMenu white disable" id="about">
+                <div class="menuIcon iconAbout"></div>
+                <h1>About</h1>
+            </div>
+            <div class="buttonMenu white disable" id="contact">
+                <div class="menuIcon iconContact"></div>
+                <h1>Contact</h1>
+            </div>
+            <div class="buttonMenu white disable" id="credits"> 
+                <div class="menuIcon iconCredits"></div>
+                <h1>Credits</h1>
+            </div>
+            <div class="buttonMenu white disable" id="resources">
+                <div class="menuIcon iconResources"></div>
+                <h1>Resources</h1>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="taskContent" class="page_taskContent">
+
+    </div>
+
+    <div data-role="page" id="taskContent2" class="page_taskContent2">
+
+    </div>
+
+    <div class="pop_question overlay">
+        <div class="popup green dbtb_back">
+            <div class="popHeader">
+                <div class="buttonIcon iconClose" id="close"></div>
+                <video class="watkinCirclePop" playsinline autoplay loop>
+                    <source src="video/Watkin_blue.mp4" type="video/mp4">
+                </video>
+                <img src="ui/Watkin question header.svg" alt="question" class="questionHead">
+                <img src="ui/Yellow question start.svg" alt="speach start" class="speechStart">
+                <div class="speechBubble yellow">
+                    <p>Beaches are made of sand. But what is sand made of?</p>
+                </div>
+            </div>
+            <div class="answerBox ansLeft white">
+                <h3>A</h3>
+                <p>Answer Text</p>
+            </div>
+            <div class="answerBox ansRight white">
+                <h3>B</h3>
+                <p>Answer Text</p>
+            </div><div class="answerBox ansLeft white">
+                <h3>C</h3>
+                <p>Answer Text</p>
+            </div><div class="answerBox ansRight white">
+                <h3>D</h3>
+                <p>Answer Text</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop_answer overlay">
+        <div class="popup green dbtb_back">
+            <div class="popHeader">
+                <div class="buttonIcon iconClose" id="close"></div>
+                <video class="presenterCircle" autoplay playsinline>
+                    <source src="" type="video/mp4">
+                </video>
+                <img src="ui/Watkin exclamation header.svg" alt="exclamation" class="questionHead">
+                <img src="ui/Yellow question start.svg" alt="speach start" class="speechStart">
+                <div class="speechBubble yellow">
+                    <p>Correct! Beaches are made of tiny peices from millions of shells, broken down over millions of years.</p>
+                </div>
+            </div>
+            <div class="answerBox ansCentre green">
+                <h3>A</h3>
+                <p>Answer Text</p>
+                
+            </div>
+            <img src="ui/Reward_FX-001.png" alt="celebration" class="rewardFX">
+            <div class="buttonCTA white">
+                <h2>Show me the Beach</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop_taskComplete overlay">
+        <div class="popup green dbtb_back">
+            <div class="popHeader">
+                <div class="buttonIcon iconClose" id="close"></div>
+                <video class="presenterCircle" autoplay playsinline>
+                    <source src="" type="video/mp4">
+                </video>
+                <img src="ui/Watkin exclamation header.svg" alt="exclamation" class="questionHead">
+                <img src="ui/Yellow question start.svg" alt="speach start" class="speechStart">
+                <div class="speechBubble yellow">
+                    <p>Cool! You built a sand wall. Notice how quickly the sea washed it away? Of course, it was only made of sand. Our strong defences keep Cleethorpes and other coastal areas safe.</p>
+                </div>
+            </div>
+            <img src="ui/Reward_FX-001.png" alt="celebration" class="completeFX">
+            <div class="circleShadow">
+                <div class="themeCircle themeCircleCentre">
+                </div>
+            </div>
+            <div class="buttonCTA white">
+                <h2>Show me the Beach</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop_congrats overlay">
+        <div class="toast">
+            <div class="toastHeader">
+                <div class="buttonIcon iconClose" id="close"></div>
+                <video class="watkinCirclePop" playsinline autoplay loop>
+                    <source src="video/Watkin_yellow.mp4" type="video/mp4">
+                </video>
+                <img src="ui/Reward_FX-001.png" alt="celebration" class="questionHead">
+                <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+                <div class="speechBubble white">
+                    <h5>Show me the Beach</h5>
+                    <p>Beaches are made of sand. But what is sand made of?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop_onboard overlay">
+        <div class="toast">
+            <div class="toastHeader">
+                <div class="buttonIcon iconClose" id="close"></div>
+                <video class="watkinCirclePop" playsinline autoplay loop>
+                    <source src="video/Watkin_yellow.mp4" type="video/mp4">
+                </video>
+                <img src="ui/White question start.svg" alt="speach start" class="speechStart">
+                <div class="speechBubble white">
+                    <h5>Show me the Beach</h5>
+                    <p>Beaches are made of sand. But what is sand made of?</p>
+                </div>
+                <div class="buttonCTA white">
+                    <h2>Show me the Beach</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

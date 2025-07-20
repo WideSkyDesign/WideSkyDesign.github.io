@@ -1,0 +1,353 @@
+.themeCicle, .DBTB{
+    background-image: url('../ui/Theme/DBTB circle.png');
+}
+.themeCicle, .LF{
+    background-image: url('../ui/Theme/LF circle.png');
+}
+.themeCicle, .MC{
+    background-image: url('../ui/Theme/MC circle.png');
+}
+.themeCicle, .NGU{
+    background-image: url('../ui/Theme/Risk circle.png');
+}
+.themeCicle, .DBTB1{
+    background-image: url('../ui/Theme/DBTB circle-1.png');
+}
+.themeCicle, .LF1{
+    background-image: url('../ui/Theme/LF circle-1.png');
+}
+.themeCicle, .MC1{
+    background-image: url('../ui/Theme/MC circle-1.png');
+}
+.themeCicle, .NGU1{
+    background-image: url('../ui/Theme/Risk circle-1.png');
+}
+.themeCicle, .DBTB2{
+    background-image: url('../ui/Theme/DBTB circle-2.png');
+}
+.themeCicle, .LF2{
+    background-image: url('../ui/Theme/LF circle-2.png');
+}
+.themeCicle, .MC2{
+    background-image: url('../ui/Theme/MC circle-2.png');
+}
+.themeCicle, .NGU2{
+    background-image: url('../ui/Theme/Risk circle-2.png');
+}
+.themeCicle, .DBTB3{
+    background-image: url('../ui/Theme/DBTB circle-3.png');
+}
+.themeCicle, .LF3{
+    background-image: url('../ui/Theme/LF circle-3.png');
+}
+.themeCicle, .MC3{
+    background-image: url('../ui/Theme/MC circle-3.png');
+}
+.themeCicle, .NGU3{
+    background-image: url('../ui/Theme/Risk circle-3.png');
+}
+
+.locationCicle, .loc0{
+    background-image: url('../ui/Header/loc0.png');
+}
+.locationCicle, .loc1{
+    background-image: url('../ui/Header/loc1.png');
+}
+.locationCicle, .loc2{
+    background-image: url('../ui/Header/loc2.png');
+}
+.locationCicle, .loc3{
+    background-image: url('../ui/Header/loc3.png');
+}
+.locationCicle, .loc4{
+    background-image: url('../ui/Header/loc4.png');
+}
+.locationCicle, .loc5{
+    background-image: url('../ui/Header/loc5.png');
+}
+.locationCicle, .loc6{
+    background-image: url('../ui/Header/loc6.png');
+}
+.locationCicle, .loc7{
+    background-image: url('../ui/Header/loc7.png');
+}
+.locationCicle, .loc8{
+    background-image: url('../ui/Header/loc8.png');
+}
+.locationCicle, .loc9{
+    background-image: url('../ui/Header/loc9.png');
+}
+.locationCicle, .loc10{
+    background-image: url('../ui/Header/loc10.png');
+}
+.locationCicle, .loc11{
+    background-image: url('../ui/Header/loc11.png');
+}
+.locationCicle, .loc12{
+    background-image: url('../ui/Header/loc12.png');
+}
+.locationCicle, .loc13{
+    background-image: url('../ui/Header/loc13.png');
+}
+.locationCicle, .loc14{
+    background-image: url('../ui/Header/loc14.png');
+}
+.locationCicle, .loc15{
+    background-image: url('../ui/Header/loc15.png');
+}
+.locationCicle, .loc16{
+    background-image: url('../ui/Header/loc16.png');
+}
+.locationCicle, .loc17{
+    background-image: url('../ui/Header/loc17.png');
+}
+
+.mapDBTB{
+    background-image: url('../ui/Map/Location_DB@2x.png');
+}
+.mapLF{
+    background-image: url('../ui/Map/Location_LF@2x.png');
+}
+.mapMC{
+    background-image: url('../ui/Map/Location_MC@2x.png');
+}
+.mapNGU{
+    background-image: url('../ui/Map/Location_NGU@2x.png');
+}
+.mapDBTB.visited{
+    background-image: url('../ui/Map/Location_DB@2x_visited.png');
+}
+.mapLF.visited{
+    background-image: url('../ui/Map/Location_LF@2x_visited.png');
+}
+.mapMC.visited{
+    background-image: url('../ui/Map/Location_MC@2x_visited.png');
+}
+.mapNGU.visited{
+    background-image: url('../ui/Map/Location_NGU@2x_visited.png');
+}
+.mapDBTB.done{
+    background-image: url('../ui/Map/Location_DB_complete@2x.png');
+}
+.mapLF.done{
+    background-image: url('../ui/Map/Location_LF_complete@2x.png');
+}
+.mapMC.done{
+    background-image: url('../ui/Map/Location_MC_complete@2x.png');
+}
+.mapNGU.done{
+    background-image: url('../ui/Map/Location_NGU_complete@2x.png');
+}
+
+.cameraGuide.task8{
+    background-image: url('../ui/ar/Cliff/view.png');
+}
+.cameraOld.task8{
+    background-image: url('../ui/ar/Cliff/old.png');
+}
+
+.cameraGuide.task13{
+    background-image: url('../ui/ar/Pool/view.png');
+}
+.cameraOld.task13{
+    background-image: url('../ui/ar/Pool/old.png');
+}
+
+.cardFront.task6.p1{
+    background-image: url('../ui/Pairs/Empire/p1.png');
+}
+.cardFront.task6.p2{
+    background-image: url('../ui/Pairs/Empire/p2.png');
+}
+.cardFront.task6.p3{
+    background-image: url('../ui/Pairs/Empire/p3.png');
+}
+.cardFront.task6.p4{
+    background-image: url('../ui/Pairs/Empire/p4.png');
+}
+.cardFront.task6.p5{
+    background-image: url('../ui/Pairs/Empire/p5.png');
+}
+.cardFront.task6.p6{
+    background-image: url('../ui/Pairs/Empire/p6.png');
+}
+.cardFront.task6.p7{
+    background-image: url('../ui/Pairs/Empire/p7.png');
+}
+.cardFront.task6.p8{
+    background-image: url('../ui/Pairs/Empire/p8.png');
+}
+.cardFront.task12.p1{
+    background-image: url('../ui/Pairs/CPT/p1.png');
+}
+.cardFront.task12.p2{
+    background-image: url('../ui/Pairs/CPT/p2.png');
+}
+.cardFront.task12.p3{
+    background-image: url('../ui/Pairs/CPT/p3.png');
+}
+.cardFront.task12.p4{
+    background-image: url('../ui/Pairs/CPT/p4.png');
+}
+.cardFront.task12.p5{
+    background-image: url('../ui/Pairs/CPT/p5.png');
+}
+.cardFront.task12.p6{
+    background-image: url('../ui/Pairs/CPT/p6.png');
+}
+.cardFront.task12.p7{
+    background-image: url('../ui/Pairs/CPT/p7.png');
+}
+.cardFront.task12.p8{
+    background-image: url('../ui/Pairs/CPT/p8.png');
+}
+.food1{
+    background-image: url('../ui/Pelican/Food/Chips.png');
+}
+.food6{
+    background-image: url('../ui/Pelican/Food/Chocolate.png');
+}
+.food5{
+    background-image: url('../ui/Pelican/Food/Crab.png');
+}
+.food7{
+    background-image: url('../ui/Pelican/Food/Frog.png');
+}
+.food3{
+    background-image: url('../ui/Pelican/Food/Sandwichpng.png');
+}
+.food2{
+    background-image: url('../ui/Pelican/Food/Shrimp.png');
+    width: 8vh;
+    height: 10vh;
+}
+.food4{
+    background-image: url('../ui/Pelican/Food/Trout.png');
+}
+.fish1{
+     width: 12vh;
+    height: 7vh;
+    background-image: url('../ui/Fishing/fish1.png');
+}
+.fish2{
+     width: 13vh;
+    height: 7vh;
+    background-image: url('../ui/Fishing/fish2.png');
+}
+.fish3{
+     width: 18vh;
+    height: 10vh;
+    background-image: url('../ui/Fishing/fish3.png');
+}
+.fish4{
+     width: 20vh;
+    height: 10vh;
+    background-image: url('../ui/Fishing/fish4.png');
+}
+.fish1.sm{
+     width: 8vh;
+    height: 5vh;
+    background-image: url('../ui/Fishing/fish1_sm.png');
+}
+.fish2.sm{
+     width: 6vh;
+    height: 5vh;
+    background-image: url('../ui/Fishing/fish2_sm.png');
+}
+.fish3.sm{
+     width: 8vh;
+    height: 8vh;
+    background-image: url('../ui/Fishing/fish3_sm.png');
+}
+.fish4.sm{
+     width: 7vh;
+    height: 5vh;
+    background-image: url('../ui/Fishing/fish4_sm.png');
+}
+#map_0{
+    left: 2620px;
+    top: 1100px;
+}
+#map_0_b{
+    left: 2562px;
+    top: 1000px;
+}
+#map_1{
+    left: 2320px;
+    top: 690px;
+}
+#map_2{
+    left: 2360px;
+    top: 1370px;
+}
+#map_3{
+    left: 2790px;
+    top: 590px;
+}
+#map_4{
+    left: 2640px;
+    top: 480px;
+}
+#map_5{
+    left: 2700px;
+    top: 600px;
+}
+#map_6{
+    left: 2280px;
+    top: 750px;
+}  
+#map_7{
+    left: 2720px;
+    top: 840px;
+}
+#map_8{
+    left: 2370px;
+    top: 950px;
+}
+#map_9{
+    left: 2400px;
+    top: 1120px;
+}
+#map_10{
+    left: 2300px;
+    top: 880px;
+}
+#map_11{
+    left: 2500px;
+    top: 940px;
+}
+#map_12{
+    left: 2200px;
+    top: 540px;
+}
+#map_13{
+    left: 1800px;
+    top: 2580px;
+}
+#map_14{
+    left: 1580px;
+    top: 2800px;
+}
+#map_15{
+    left: 2230px;
+    top: 1650px;
+}
+#map_16{
+    left: 1750px;
+    top: 3450px;
+}
+#map_17{
+    left: 2350px;
+    top: 1200px;
+}
+#wc_0{
+    left: 2600px;
+    top: 440px;
+}
+#wc_1{
+    left: 2620px;
+    top: 580px;
+}#wc_2{
+    left: 1820px;
+    top: 2480px;
+}

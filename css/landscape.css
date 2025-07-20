@@ -1,0 +1,367 @@
+@media screen and (orientation: landscape) { 
+  html { 
+    transform: rotate(-90deg); 
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+  }
+
+  .ui-mobile, .ui-mobile body {
+    height: 100vw;
+}
+
+h4 {
+    margin-top: 6vw;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+img.headerImage {
+    height: 35vw;
+}
+
+img.instructionImage {
+    width: 20vh;
+    height: 10vw;
+    margin-left: 3vh;
+}
+
+.backTask {
+    padding-top: 5vw;
+}
+
+.backPresenter {
+    padding-top: 10vw;
+    padding-bottom: 5vw;
+}
+
+.speechBubble {
+    margin-top: -2px;
+    padding: 3vh;
+}
+
+.speechBubble2 {
+    margin-top: 5vw;
+    padding: 3vh;
+}
+
+.answerBox {
+    width: 35vh;
+    height: 20vw;
+    margin-bottom: 2vw;
+    padding-top: 3vw;
+}
+
+.ansRight{
+    margin-right: 9vh;
+    margin-left: 1vh;
+}
+.ansLeft{
+    margin-left: 9vh;
+    margin-right: 1vh;
+}
+
+
+.topMenu{
+    width: 100vh;
+    height: 7vw;
+}
+
+.title{
+    width: 65vh;
+    height: 7vw;
+}
+
+.page_home{
+    height: 100vw;
+}
+
+.mapContainer {
+    width: 100vh;
+    height: 100vw;
+}
+
+.locationCircle{
+    margin-right: 5vh;
+    width: 18vw;
+    height: 18vw;
+}
+
+.themeCircle {
+    margin-right: 5vh;
+    width: 18vw;
+    height: 18vw;
+}
+
+.themeCircleCentre{
+    width: 18vw;
+    height: 18vw;
+}
+
+
+.menuList {
+    margin-top: 10vw;
+}
+
+.buttonCTA {
+    padding: 1vh;
+}
+
+.buttonMenu {
+    height: 7vw;
+    padding: 1vh;
+}
+
+.buttonTheme {
+    height: 20vw;
+    margin: 4vw;
+    padding-top: 1vw;
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+
+.buttonLocation {
+    height: 20vw;
+    margin: 4vw;
+    padding-top: 1vw;
+    padding-left: 5vh;
+    padding-right: 5vh;
+}
+
+.buttonResource {
+    height: 20vw;
+    margin: 4vw;
+    padding-top: 1vw;
+    padding-left: 5vh;
+    padding-right: 5vh;
+  
+}
+
+.buttonTask {
+    height: 22vw;
+}
+
+.buttonIcon {
+    width: 7vw;
+    height: 7vw;
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+
+.menuIcon {
+    margin-left: 3vh;
+    margin-right: 3vh;
+}
+
+.iconZoomIn {
+    margin: 2vw;
+    
+}
+.iconZoomOut {
+    margin: 2vw;
+}
+.iconFilter {
+    margin: 2vw;
+}
+
+.iconClose {
+    margin-top: -3vw;
+    margin-right: 2vh;
+}
+
+
+
+.iconBar{
+    padding-top: 2vw;
+    padding-bottom: 1.5vw;
+}
+
+.compass{
+    margin-top: 5vw;
+}
+
+.compassFace{
+    width: 15vw;
+    height: 15vw;
+    margin-right: 3vh;
+}
+
+.compassPoint{
+    width: 15vw;
+    height: 14vw;
+}
+
+.gull{
+    width: 15vw;
+    height: 10vw;
+    margin-left: 2vw;
+    margin-bottom: -2vw;
+}
+
+.popup{
+    width: 90vh;
+    height: 94vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+.popHeader{
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    margin-bottom: 5vw;
+}
+
+.toast{
+    width: 100vh;
+    height: 65vw;
+    margin-top: 35vw;
+    margin-bottom: 0vw;
+}
+
+.toastHeader{
+   
+    padding-top: 5vw;
+    padding-bottom: 20vw;
+}
+
+.audioBar{
+    height: 18vw;
+}
+
+.buttonAudio {
+
+    padding: 1vh;
+    border-radius: 25vw;
+  
+}
+
+.playButton {
+  
+    margin-top: 1vw;
+  
+    width: 7vw;
+    height: 7vw;
+}
+
+.progressBack {
+    width: 50vh;
+    height: 1vw;
+    border-radius: 1vw;
+    margin-top: 3.5vw;
+    margin-bottom: 3.5vw;
+ 
+}
+
+.progressBar {
+    margin: 0.2vw;
+    height: 0.6vw;
+    border-radius: 1vw;
+}
+
+.cardGame{
+    margin-top: 10vw;
+    margin-left: 1vh;
+}
+.card{
+   
+    width: 22vh;
+    height: 18vw;
+    padding: 0.5vw;
+    margin-top: 1vw;
+    margin-left: 2vh;
+   
+}
+
+
+
+.backPelican{
+   
+    width: 100vh;
+    height: 40vw;
+    margin-top: -5vw;
+    padding-top: 5vw;
+}
+.pelican{
+    
+    width: 100%;
+    height: 50vw;
+}
+
+.basketFood{
+  
+    height: 40vw;
+    margin-top: 25vw;
+    padding-top:10vw;
+    padding-left:5vh;
+}
+.food{
+   
+    width: 10vw;
+    height: 10vw;
+   
+}
+
+.scoreBar{
+  
+    height: 25vw;
+    padding-top: 10vw;
+}
+
+.scoreLeft{
+    width: 35vh;
+ 
+}
+
+.scoreCentre{
+    width: 30vh;
+ 
+}
+
+.scoreRight{
+    width: 35vh;
+
+}
+.clock{
+    
+    width:30vh;
+    height: 20vw;
+    
+}
+
+.fishingBack{
+ 
+    width: 100vh;
+    height: 100vw;
+    margin-top: -5vw;
+}
+.fishingContainer{
+    margin-top: 5vw;
+    width: 100vh;
+}
+
+.fishingIcon.sm{
+    width: 5vw;
+    height: 5vw;
+}
+
+
+.floatRight {
+ 
+    bottom: 2vw;
+    right: 2vh;
+}
+
+.cover {
+   
+    padding-top: 1vw;
+
+}
+
+
+
+}

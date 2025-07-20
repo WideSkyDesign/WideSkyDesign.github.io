@@ -1,0 +1,1009 @@
+@font-face {
+    font-family: 'CabinetGrotesk-Regular';
+    src: url('../fonts/CabinetGrotesk-Regular.woff2') format('woff2'), url('../fonts/CabinetGrotesk-Regular.woff') format('woff'), url('../fonts/CabinetGrotesk-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CabinetGrotesk-Bold';
+    src: url('../fonts/CabinetGrotesk-Bold.woff2') format('woff2'), url('../fonts/CabinetGrotesk-Bold.woff') format('woff'), url('../fonts/CabinetGrotesk-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CircularStd-Medium';
+    src: url('../fonts/CircularStd-Medium.woff2') format('woff2'), url('../fonts/CircularStd-Medium.woff') format('woff'), url('../fonts/CircularStd-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CircularStd-Bold';
+    src: url('../fonts/CircularStd-Bold.woff2') format('woff2'), url('../fonts/CircularStd-Bold.woff') format('woff'), url('../fonts/CircularStd-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+body {
+    font-family: 'CircularStd-Medium';
+    padding: 0;
+    margin: 0;
+    text-shadow: none;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+.blue > p {
+    color: white;
+}
+
+h1 {
+    font-family: 'CabinetGrotesk-Bold';
+    font-size: 2em;
+    color: black;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0;
+}
+
+
+h2 {
+    font-family: 'CircularStd-Bold';
+    font-size: 1.8em;
+    color: #27498c;
+    text-align: center;
+    margin: 0.5em;
+}
+
+h3 {
+    font-family: 'CircularStd-Bold';
+    font-size: 2.5em;
+    color: black;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-family: 'CircularStd-Bold';
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    margin-top: 6vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+h5 {
+    font-family: 'CircularStd-Bold';
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 1em;
+}
+
+.blue > h5 {
+    color: white;
+}
+
+h6 {
+    font-family: 'CircularStd-Bold';
+    font-size: 1.5em;
+    color: #27498c;
+    margin-bottom: 1em;
+}
+
+.smallP{
+    font-size: 0.8em;
+    color: black;
+}
+
+.whiteT {
+    color: white;
+}
+
+img.headerImage {
+    width: 100%;
+    height: 35vh;
+    margin: 0;
+}
+
+img.watkinCircle {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-top: -20%;
+    
+    clear: both;
+}
+video.watkinCircle {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-top: -20%;
+    clear: both;
+    clip-path: circle();
+}
+
+img.watkinCirclePop {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+    clear: both;
+}
+video.watkinCirclePop {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+    clear: both;
+    clip-path: circle();
+}
+
+img.presenterCircle {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+    clear: both;
+}
+
+video.presenterCircle {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+    clear: both;
+    clip-path: circle();
+}
+
+img.presenterCirclePop {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+    clear: both;
+}
+
+img.speechStart {
+    width: 10%;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-top: -15%;
+    margin-left: 38%;
+    position: relative;
+}
+
+img.questionHead {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 20%;;
+    margin-top: -50%;
+    margin-bottom: -21%;
+    position: relative;
+}
+
+img.rewardFX {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-top: -60%;
+    margin-bottom: -12%;
+    position: relative;
+    pointer-events: none;
+}
+
+img.completeFX {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-top: -20%;
+    margin-bottom: -50%;
+    position: relative;
+    pointer-events: none;
+}
+
+img.instructionImage {
+    width: 20vw;
+    height: 10vh;
+    float: right;
+    margin-left: 3vw;
+}
+
+img.guideImage {
+    width: 100%;
+    height: auto;
+}
+
+.white {
+    background-color: #f2f2f2;
+}
+
+.yellow {
+    background-color: #fecc11;
+}
+
+.green {
+    background-color: #a3e95e;
+}
+
+.blue {
+    background-color: #27498c;
+}
+
+.lightblue {
+    background-color: #8cdfea;
+}
+
+.pink {
+    background-color: #f199a3;
+}
+
+.purple {
+    background-color: #de95e0;
+}
+
+.ansWrong {
+    background-color: #f22222;
+}
+
+.ansCorrect {
+    background-color: #a3e95e;
+}
+
+.fish{
+    background-image: url('../ui/backgrounds/fish.png');
+}
+.dbtb_back {
+    background-image: url('../ui/backgrounds/DBTB_back.png');
+}
+.mc_back {
+    background-image: url('../ui/backgrounds/MC_back.png');
+}
+.lf_back {
+    background-image: url('../ui/backgrounds/LF_back.png');
+}
+.ngu_back {
+    background-image: url('../ui/backgrounds/NGU_back.png');
+}
+.splash{
+    background-image: url('../ui/backgrounds/splash.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.clear {
+    clear: both;
+}
+
+
+.mapImage {
+    background-image: url('../ui/Map.webp');
+    background-size: cover;
+    width: 4096px;
+    height: 4096px;
+    zoom: 1;
+}
+
+.backWatkin{
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+.backTask {
+    width: 100%;
+    padding-bottom: 10%;
+    padding-top: 5vh;
+}
+
+.backPresenter {
+    width: 100%;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+}
+
+.speechBubble {
+    width: 84%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2px;
+    padding: 3vw;
+    border-radius: 30px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.speechBubble2 {
+    width: 84%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    padding: 3vw;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.mapIcon {
+    position: absolute;
+    width: 75px;
+    height: 100px;
+    background-size: cover;
+    pointer-events: all;
+}
+
+.starthere {
+    width: 240px;
+    height: 200px;
+    background-image: url('../ui/Map/Start_arrows.svg');
+    pointer-events: none;
+}
+
+.meIcon {
+    position: absolute;
+    width: 57px;
+    height: 75px;
+    background-size: cover;
+    background-image: url('../ui/Map/here.svg');
+    left: 1050px;
+    top: 800px;
+    pointer-events: none;
+}
+
+.toiletIcon {
+    position: absolute;
+    width: 57px;
+    height: 75px;
+    background-size: cover;
+    background-image: url('../ui/Map/toilets.svg');
+    pointer-events: none;
+}
+
+.answerBox {
+    width: 35vw;
+    height: 20vh;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    float: left;
+    margin-bottom: 2vh;
+    text-align: center;
+    padding: 1em;
+    padding-top: 3vh;
+}
+
+.ansRight{
+    margin-right: 9vw;
+    margin-left: 1vw;
+}
+.ansLeft{
+    margin-left: 9vw;
+    margin-right: 1vw;
+}
+
+.ansCentre{
+    float: none;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topMenu{
+    position: fixed;
+    z-index: 900;
+    width: 100vw;
+    height: 7vh;
+}
+
+.title{
+    width: 65vw;
+    height: 7vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page_home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.mapContainer {
+    overflow: auto; /* adds scrollbars */
+    flex: 1 1 100%;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.locationCircle{
+    background-size: cover;
+    float: Left;
+    margin-right: 5vw;
+    width: 18vh;
+    height: 18vh;
+    clip-path: circle();
+}
+
+.themeCircle {
+    background-size: cover;
+    float: Left;
+    margin-right: 5vw;
+    width: 18vh;
+    height: 18vh;
+}
+
+.themeCircleCentre{
+    background-size: cover;
+    float: none;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 18vh;
+    height: 18vh;
+    clip-path: circle();
+}
+
+.circleShadow {
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+.menuList {
+    margin-top: 10vh;
+}
+
+.buttonCTA {
+    width: 84%;
+    margin: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vw;
+    border-radius: 25vh;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.buttonMenu {
+    width: 84%;
+    margin: 5%;
+    height: 7vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vw;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    clear: both;
+    align-items: center;
+    display: flex;
+}
+
+.buttonTheme {
+    width: 84%;
+    height: 20vh;
+    margin: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.buttonLocation {
+    width: 84%;
+    height: 20vh;
+    margin: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.buttonResource {
+    width: 84%;
+    height: 20vh;
+    margin: 4vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.buttonTask {
+    background-image: url('../ui/BG/Game 2.jpg');
+    background-size: cover;
+    width: 84%;
+    height: 22vh;
+    margin: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.buttonIcon {
+    width: 7vh;
+    height: 7vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    pointer-events: all;
+}
+
+.rot5 {
+    rotate: 1.5deg;
+}
+
+.rot5A {
+    rotate: -1.5deg;
+}
+
+.menuIcon {
+    width: 2.5em;
+    height: 2.5em;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+}
+
+.iconBack {
+    background-image: url('../ui/TopBar/Back icon.svg');
+    float: left;
+}
+.iconMenu {
+    background-image: url('../ui/TopBar/Menu icon.svg');
+    float: right;
+}
+
+.iconZoomIn {
+    background-image: url('../ui/Controls/Zoom in button.svg');
+    margin: 2vh;
+    
+}
+.iconZoomOut {
+    background-image: url('../ui/Controls/Zoom out button.svg');
+    margin: 2vh;
+}
+.iconFilter {
+    background-image: url('../ui/Filter/Filter button.svg');
+    margin: 2vh;
+}
+
+.iconClose {
+    background-image: url('../ui/Icons/Close.svg');
+    float: right;
+    margin-top: -3vh;
+    margin-right: 2vw;
+}
+
+.iconHome{
+    background-image: url('../ui/Icons/Home-icon.svg');
+}
+.iconMap{
+    background-image: url('../ui/Icons/Map-icon.svg');
+}
+.iconThemes{
+    background-image: url('../ui/Icons/Lightbulb-icon.svg');
+}
+.iconLocations{
+    background-image: url('../ui/Icons/Locations-icon.svg');
+}
+.iconRewards{
+    background-image: url('../ui/Icons/Rewards-icon.svg');
+}
+.iconHelp{
+    background-image: url('../ui/Icons/Help-icon.svg');
+}
+.iconAbout{
+    background-image: url('../ui/Icons/About-icon.svg');
+}
+.iconContact{
+    background-image: url('../ui/Icons/Contact-icon.svg');
+}
+.iconCredits{
+    background-image: url('../ui/Icons/Credits-icon.svg');
+}
+.iconResources{
+    background-image: url('../ui/Icons/Resources-icon.svg');
+}
+
+.iconDBTB{
+    background-image: url('../ui/Icons/Theme/Icon - Dream Big.png');
+}
+.iconLF{
+    background-image: url('../ui/Icons/Theme/Icon - look forward.png');
+}
+.iconMC{
+    background-image: url('../ui/Icons/Theme/Icon - Make Connections.png');
+}
+.iconNGU{
+    background-image: url('../ui/Icons/Theme/Icon - Never Give Up.png');
+}
+.iRotate{
+    transform: rotate(90deg);
+    float: left;
+}
+.iconBar{
+    padding-top: 2vh;
+    padding-bottom: 1.5vh;
+    justify-content: center;
+    display: flex;
+}
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.compass{
+    position: relative;
+    float: right;
+    margin-top: 5vh;
+}
+
+.compassFace{
+    width: 15vh;
+    height: 15vh;
+    background-image: url('../ui/Compass base_mobile.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 3vw;
+    rotate: 70deg;
+}
+
+.compassPoint{
+    width: 15vh;
+    height: 14vh;
+    background-image: url('../ui/Compass needle_mobile.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gull{
+    width: 15vh;
+    height: 10vh;
+    background-image: url('../ui/Compass seagull.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-left: 2vh;
+    margin-bottom: -2vh;
+}
+
+.popup{
+    width: 90vw;
+    height: 94vh;
+    border-radius: 30px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.popHeader{
+    width:inherit;
+    background-image: url('../ui/Sand bg.png');
+    background-size: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+}
+
+.toast{
+    width: 100vw;
+    height: 65vh;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-top: 40vh;
+    margin-bottom: 0vh;
+}
+
+.toastHeader{
+    width:inherit;
+    background-image: url('../ui/Reward toast bg.png');
+    background-size: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding-top: 5vh;
+    padding-bottom: 20vh;
+}
+
+.audioBar{
+    height: 18vh;
+}
+
+.buttonAudio {
+    width: 84%;
+    margin: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vw;
+    border-radius: 25vh;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.playButton {
+    background-image: url('../ui/Controls/Play audio.svg');
+    margin-top: 1vh;
+    float: left;
+    width: 7vh;
+    height: 7vh;
+}
+
+.progressBack {
+    width: 50vw;
+    height: 1vh;
+    border-radius: 1vh;
+    margin-top: 3.5vh;
+    margin-bottom: 3.5vh;
+    float: left;
+}
+
+.progressBar {
+    margin: 0.2vh;
+    width:  99%;
+    height: 0.6vh;
+    border-radius: 1vh;
+}
+
+.cardGame{
+    margin-top: 10vh;
+    margin-left: 1vw;
+}
+.card{
+    background-image: url('../ui/Pairs/Card default.svg');
+    background-size: cover;
+    width: 22vw;
+    height: 18vh;
+    padding: 0.5vh;
+    margin-top: 1vh;
+    margin-left: 2vw;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.card.selected{
+    background-image: url('../ui/Pairs/Card selected.svg');
+}
+.card.correct{
+    background-image: url('../ui/Pairs/Card correct.svg');
+}
+.card.incorrect{
+    background-image: url('../ui/Pairs/Card incorrect.svg');
+}
+.cardFront{
+    background-image: url('../ui/Pairs/Card back.svg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.cardBack{
+    background-image: url('../ui/Pairs/Card back.svg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.backPelican{
+    background-image: url('../ui/Pelican/Blue BG.png');
+    background-size: cover;
+    width: 100vw;
+    height: 40vh;
+    margin-top: -5vh;
+    padding-top: 5vh;
+}
+.pelican{
+    background-image: url('../ui/Pelican/Pelican/polly_close.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+}
+.pelican.open{
+    background-image: url('../ui/Pelican/Pelican/polly_open.png');
+}
+.basketFood{
+    background-image: url('../ui/Pelican/Basket.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 40vh;
+    margin-top: 25vh;
+    padding-top:10vh;
+    padding-left:5vw;
+}
+.food{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10vh;
+    height: 10vh;
+    float: left;
+}
+
+.scoreBar{
+    width: 100%;
+    height: 25vh;
+    padding-top: 10vh;
+}
+
+.scoreLeft{
+    width: 35vw;
+    float: left;
+}
+
+.scoreCentre{
+    width: 30vw;
+    float: left;
+}
+
+.scoreRight{
+    width: 35vw;
+    float: left;
+}
+.clock{
+    background-image: url('../ui/Icons/clock.png');
+    width:30vw;
+    height: 20vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fishingBack{
+    background-image: url('../ui/Fishing/bg.png');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    margin-top: -5vh;
+}
+.fishingContainer{
+    margin-top: 5vh;
+    width: 100vw;
+}
+
+.fishingIcon{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fishingIcon.sm{
+    width: 5vh;
+    height: 5vh;
+}
+
+
+.floatRight {
+    float: right;
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; 
+}
+
+.cover {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 1vh;
+
+}
+
+.cameraView{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    background-image: url('../ui/ar/view.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.cameraGuide{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.cameraOld{
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.arOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../ui/ar/overlay.svg');
+    background-size: cover;
+    background-position: center center;
+    z-index: 1000; 
+}
+
+.glassOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../ui/ar/stainedGlass.png');
+    background-size: cover;
+    background-position: center center;
+    z-index: 1000; 
+}
+
+.rnd{
+    border-radius: 30px;
+}
+
+.noclick{
+    pointer-events: none;
+}
+
+.nopad{
+    padding: 0;
+}
+
+.disable {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.off{
+    display: none;
+}
