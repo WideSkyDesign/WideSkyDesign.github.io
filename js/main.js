@@ -725,7 +725,7 @@ function SetTask(){
 			break;
 		case "7.0":
 			$(".page_taskContent").html("<video class='cameraView' id='camera' playsinline autoplay></video><div class='glassOverlay'> <div class='backTask'> <div class='buttonIcon iconClose iRotate' id='closeTask'></div> </div> </div>");
-			initGlass();
+			//initGlass();
 			break;
 		case "8.0":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Here are some instructions to find the right place to view the images. I'm here to help!<br><br>When you're in the right place, use the 'I'm ready' button to see the image from the past.</p> </div> <div class='speechBubble2 white rot5A'> <h6>1. Move to Ross Castle</h6> <p>Take care when crossing any roads!</p> </div> <div class='speechBubble2 white rot5'> <h6>2. Walk to the top of Ross Castle</h6> <p>The sea should be on your right</p> </div> <div class='speechBubble2 white nopad rot5A'> <img src='ui/ar/Cliff/guide.png' alt='guide image' class='guideImage'> </div> <div class='speechBubble2 white rot5'> <h6>3. Check your position</h6> <p>If your view looks like the one pictured, then you're ready! Touch the button to continue.</p> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>I'm ready!</h2> </div> </div>");
@@ -790,8 +790,8 @@ function SetTask(){
 function initGlass(){
 	$(".glassOverlay").hide();
 	if(navigator && navigator.mediaDevices){
-    	//const options = { audio: false, video: { facingMode: "environment", width: 200, height: 200  } }
-		const constraints = {
+    	const options = { audio: false, video: { facingMode: "environment", width: 1920, height: 1080  } }
+		/*const constraints = {
 		audio: false,
 		video: {
 			facingMode: "environment",
@@ -806,8 +806,8 @@ function initGlass(){
 			max: 1440,
 			},
 		},
-		}
-		navigator.mediaDevices.getUserMedia(constraints)
+		}*/
+		navigator.mediaDevices.getUserMedia(options)
 		.then(function(stream) {
 			var video = document.getElementById('camera');
 			video.srcObject = stream;
