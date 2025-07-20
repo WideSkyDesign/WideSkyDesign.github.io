@@ -11,7 +11,7 @@
 
   .ui-mobile, .ui-mobile body {
     height: 100vw;
-    
+
 }
 
 h4 {
@@ -332,6 +332,16 @@ img.instructionImage {
     width:30vh;
     height: 20vw;
     
+}
+
+.cameraView{
+    width: 100vh;
+    height: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    object-fit: cover;
 }
 
 .fishingBack{

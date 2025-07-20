@@ -790,7 +790,7 @@ function SetTask(){
 function initGlass(){
 	$(".glassOverlay").hide();
 	if(navigator && navigator.mediaDevices){
-    	const options = { audio: false, video: { facingMode: "user", width: 1920, height: 1080  } }
+    	const options = { audio: false, video: { facingMode: "environment", width: 1920, height: 1080  } }
 		/*const constraints = {
 		audio: false,
 		video: {
