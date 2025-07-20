@@ -287,6 +287,7 @@ function init() {
 							taskComplete();
 							break;
 						default:
+							initGlass();
 							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
 							break;
 					}
@@ -723,7 +724,7 @@ function SetTask(){
 			initPairs();
 			break;
 		case "7.0":
-			$(".page_taskContent").html("<video class='cameraView' playsinline autoplay></video><div class='glassOverlay'> <div class='backTask'> <div class='buttonIcon iconClose iRotate' id='closeTask'></div> </div> </div>");
+			$(".page_taskContent").html("<video class='cameraView' id='camera' playsinline autoplay></video><div class='glassOverlay'> <div class='backTask'> <div class='buttonIcon iconClose iRotate' id='closeTask'></div> </div> </div>");
 			initGlass();
 			break;
 		case "8.0":
@@ -792,7 +793,7 @@ function initGlass(){
     	const options = { audio: false, video: { facingMode: "user", width: 200, height: 200  } }
 		navigator.mediaDevices.getUserMedia(options)
 		.then(function(stream) {
-			var video = document.querySelector('.cameraView');
+			var video = document.getElementById('camera');
 			video.srcObject = stream;
 			video.onloadedmetadata = function(e) {
 			video.play();
