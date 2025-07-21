@@ -398,7 +398,7 @@ var json =
 				{
 					"Title": "Feed Polly the Pelican",
 					"Intro": "Polly the Pelican has woken up, and she's very hungry! Can you help feed her by throwing food into her beak? But be careful, she's also very fussy and won't eat any old junk.<br><br>Pelicans live by the water and although they are big and heavy, they swim and fly very well.<br><br>What do you think is the best food for a pelican?",
-					"Feedback": "Well done! You scored x by feeding Polly the right things. Pelicans like fish, of course! But they are at risk from overfishing and other human activities.",
+					"Feedback": "Well done! You scored 4/4 by feeding Polly the right things. Pelicans like fish, of course! But they are at risk from overfishing and other human activities.",
 					"FeedbackClip": "video/Alexis/well_done.mp4",
 					"CTA": "Play the game!",
 					"Theme": "DBTB",

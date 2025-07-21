@@ -259,7 +259,7 @@
     </div>
 
     <div data-role='page' id='taskContent_7.0' class='page_taskContent stainedGlass'>
-        <video class='cameraView' id="camera" playsinline autoplay></video>
+        <video class='cameraView' id='camera' playsinline autoplay></video>
         <div class='glassOverlay'>
                 <div class='backTask'>
                     <div class='buttonIcon iconClose iRotate' id='closeTask'></div>
@@ -299,7 +299,7 @@
         </div>
     </div>
     <div data-role='page' id='taskContent_8.0b' class='page_taskContent climbCliffGardens'>
-        <video class='cameraView' id="camera" playsinline autoplay></video>
+        <video class='cameraView' id='camera' playsinline autoplay></video>
         <div class='cameraGuide task8'>
             <div class='cameraOld task8'></div>
         </div>
@@ -352,14 +352,14 @@
                         </div>
                     </div>
                     <div class='fishingContainer'>
-                        <div class='fishingIcon fish1'></div>
-                        <div class='fishingIcon fish2'></div>
-                        <div class='fishingIcon fish3'></div>
-                        <div class='fishingIcon fish4'></div>
-                        <div class='fishingIcon fish1 sm'></div>
-                        <div class='fishingIcon fish2 sm'></div>
-                        <div class='fishingIcon fish3 sm'></div>
-                        <div class='fishingIcon fish4 sm'></div>
+                        <div class='fishingIcon fish1 fR'></div>
+                        <div class='fishingIcon fish2 fR'></div>
+                        <div class='fishingIcon fish3 fR'></div>
+                        <div class='fishingIcon fish4 fL'></div>
+                        <div class='fishingIcon fish1 sm fL'></div>
+                        <div class='fishingIcon fish2 sm fR'></div>
+                        <div class='fishingIcon fish3 sm fL'></div>
+                        <div class='fishingIcon fish4 sm fL'></div>
                     </div>
                 </div>
         </div>
@@ -486,7 +486,7 @@
         </div>
     </div>
      <div data-role='page' id='taskContent_13.0b' class='page_taskContent swimToTheFuture'>
-        <video class='cameraView' id="camera" playsinline autoplay></video>
+        <video class='cameraView' id='camera' playsinline autoplay></video>
         <div class='cameraGuide task13'>
             <div class='cameraOld task13'></div>
         </div>
@@ -565,6 +565,63 @@
             <div class='buttonCTA blue'>
                 <h2 class='whiteT'>Sail your boats!</h2>
             </div>
+        </div>
+    </div>
+
+    <div data-role='page' id='taskContent_15.0' class='page_taskContent sortRubbish'>
+
+        <div class='backTask'>
+                <div class='buttonIcon iconClose' id='closeTask'></div>
+            
+                <div class='backBin'>
+                    <div class='scoreBar yellow'>
+                        <div class='scoreLeft'>
+                            <h2>Your score:</h2>
+                            <h1>00</h1>
+                        </div>
+                        <div class='scoreCentre'>
+                            <div class='clock'></div>
+                        </div>
+                        <div class='scoreRight'>
+                            <h2>Time remaining:</h2>
+                            <h1>30</h1>
+                        </div>
+                    </div>
+                    <div class='binContainer'>
+                        <div class='bin bin1'>
+                            <div class='lozenge white'>
+                                <h5>Aluminium</h5>
+                            </div>
+                            <div class='hole hole1'></div>
+                        </div>
+                        <div class='bin bin2'>
+                            <div class='lozenge white'>
+                                <h5>Glass</h5>
+                            </div>
+                            <div class='hole hole2'></div>
+                        </div>
+                        <div class='bin bin3'>
+                            <div class='lozenge white'>
+                                <h5>Paper</h5>
+                            </div>
+                            <div class='hole hole3'></div>
+                        </div>
+                        <div class='bin bin4'>
+                            <div class='lozenge white'>
+                                <h5>Non-recyclable</h5>
+                            </div>
+                            <div class='hole hole4'></div>
+                        </div>
+                    </div>
+                    <div class='footer'>
+                        <div class='belt'>
+                            <div class='rubbish rubb1' id='bin1'></div>
+                            <div class='rubbish rubb2' id='bin3'></div>
+                            <div class='rubbish rubb3' id='bin4'></div>
+                            <div class='rubbish rubb4' id='bin3'></div>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 

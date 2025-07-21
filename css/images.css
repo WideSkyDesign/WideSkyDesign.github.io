@@ -264,6 +264,30 @@
     height: 5vh;
     background-image: url('../ui/Fishing/fish4_sm.png');
 }
+.hole.hole1{
+    background-image: url('../ui/Bin/Hole_aluminium.svg');
+}
+.hole.hole2{
+    background-image: url('../ui/Bin/Hole_glass.svg');
+}
+.hole.hole3{
+    background-image: url('../ui/Bin/Hole_paper.svg');
+}
+.hole.hole4{
+    background-image: url('../ui/Bin/Hole_non recylclable.svg');
+}
+.rubbish.rubb1{
+    background-image: url('../ui/Bin/Can@2x.png');
+}
+.rubbish.rubb2{
+    background-image: url('../ui/Bin/Paper@2x-1.png');
+}
+.rubbish.rubb3{
+    background-image: url('../ui/Bin/Chicken@2x.png');
+}
+.rubbish.rubb4{
+    background-image: url('../ui/Bin/Paper@2x.png');
+}
 #map_0{
     left: 2620px;
     top: 1100px;

@@ -302,6 +302,14 @@ function init() {
 							$("body").addClass("black");
 							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
 							break;
+						case "11.0":
+							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
+							setTimeout(startFishing, 1000);
+							break;
+						case "15.0":
+							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
+							setTimeout(startRubbish, 1000);
+							break;
 						default:
 							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
 							break;
@@ -752,10 +760,12 @@ function SetTask(){
 			break;
 		case "9.0":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <div class='backPelican'> <div class='pelican open'></div> </div> <div class='basketFood'> <div class='food food1'></div> <div class='food food2'></div> <div class='food food3'></div> <div class='food food4'></div> <div class='food food5'></div> <div class='food food6'></div> <div class='food food7'></div> </div> </div>");
-		break;
+			initPolly();		
+			break;
 		case "11.0":
-			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <div class='fishingBack'> <div class='scoreBar pink'> <div class='scoreLeft'> <h2>Your score:</h2> <h1>00</h1> </div> <div class='scoreCentre'> <div class='clock'></div> </div> <div class='scoreRight'> <h2>Time remaining:</h2> <h1>30</h1> </div> </div> <div class='fishingContainer'> <div class='fishingIcon fish1'></div> <div class='fishingIcon fish2'></div> <div class='fishingIcon fish3'></div> <div class='fishingIcon fish4'></div> <div class='fishingIcon fish1 sm'></div> <div class='fishingIcon fish2 sm'></div> <div class='fishingIcon fish3 sm'></div> <div class='fishingIcon fish4 sm'></div> </div> </div> </div>");
-		break;
+			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <div class='fishingBack'> <div class='scoreBar pink'> <div class='scoreLeft'> <h2>Your score:</h2> <h1>00</h1> </div> <div class='scoreCentre'> <div class='clock'></div> </div> <div class='scoreRight'> <h2>Time remaining:</h2> <h1>30</h1> </div> </div> <div class='fishingContainer'> <div class='fishingIcon fish1 fR'></div> <div class='fishingIcon fish2 fR'></div> <div class='fishingIcon fish3 fR'></div> <div class='fishingIcon fish4 fL'></div> <div class='fishingIcon fish1 sm fL'></div> <div class='fishingIcon fish2 sm fR'></div> <div class='fishingIcon fish3 sm fL'></div> <div class='fishingIcon fish4 sm fL'></div> </div> </div> </div>");
+			initFishing();
+			break;
 		case "12.0":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <div class='cardGame'> <div class='card'> <div class='cardFront task12 p1'> <div class='cardBack '></div> </div> </div> <div class='card'> <div class='cardFront task12 p2'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p3'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p4'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p5'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p6'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p7'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p8'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p1'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p2'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p3'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p4'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p5'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p6'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p7'> <div class='cardBack'></div> </div> </div> <div class='card'> <div class='cardFront task12 p8'> <div class='cardBack'></div> </div> </div> </div> </div>");
 			initPairs();
@@ -767,6 +777,10 @@ function SetTask(){
 		case "14.1":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>I think a good boat should do two things: stay afloat, and sail a long way.<br /><br />Follow the instructions below or make your own.</p> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Boat/paper 01.svg' alt='instruction' class='instructionImage'> <h6>1</h6> <p>Start with a rectangular piece of paper, coloured side up. Fold in half, then open.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Boat/paper 02.svg' alt='instruction' class='instructionImage'> <h6>2</h6> <p>Fold in half downwards.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Boat/paper 03.svg' alt='instruction' class='instructionImage'> <h6>3</h6> <p>Bring corners in to centre line.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Boat/paper 04.svg' alt='instruction' class='instructionImage'> <h6>4</h6> <p>Fold uppermost layer upwards and do the same to the back. Crease well.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Boat/paper 05.svg' alt='instruction' class='instructionImage'> <h6>5</h6> <p>Pull the sides out and flatten.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Boat/paper 06.svg' alt='instruction' class='instructionImage'> <h6>6</h6> <p>Fold front layer up to top, and do the same to the back.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Boat/paper 07.svg' alt='instruction' class='instructionImage'> <h6>7</h6> <p>Pull the sides outwards and flatten.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Boat/paper 08.svg' alt='instruction' class='instructionImage'> <h6>8</h6> <p>Gently pull the top parts of the model outwards, making a boat shape.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Boat/paper 09.svg' alt='instruction' class='instructionImage'> <h6>9</h6> <p>Flatten well to crease all folds. Then open out slightly, forming a boat shape.</p> <div class='clear'></div> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>Sail your boats!</h2> </div> </div>");
 		break;
+		case "15.0":
+			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <div class='backBin'> <div class='scoreBar yellow'> <div class='scoreLeft'> <h2>Your score:</h2> <h1>00</h1> </div> <div class='scoreCentre'> <div class='clock'></div> </div> <div class='scoreRight'> <h2>Time remaining:</h2> <h1>30</h1> </div> </div> <div class='binContainer'> <div class='bin bin1'> <div class='lozenge white'> <h5>Aluminium</h5> </div> <div class='hole hole1'></div> </div> <div class='bin bin2'> <div class='lozenge white'> <h5>Glass</h5> </div> <div class='hole hole2'></div> </div> <div class='bin bin3'> <div class='lozenge white'> <h5>Paper</h5> </div> <div class='hole hole3'></div> </div> <div class='bin bin4'> <div class='lozenge white'> <h5>Non-recyclable</h5> </div> <div class='hole hole4'></div> </div> </div> <div class='footer'> <div class='belt'> <div class='rubbish rubb1' id='bin1'></div> <div class='rubbish rubb2'id='bin3'></div> <div class='rubbish rubb3' id='bin4'></div> <div class='rubbish rubb4' id='bin3'></div> </div> </div> </div> </div>");
+			initRubbish();
+			break;
 		case "15.1":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Your task for this location is to design a recycling sculpture. Think about what it would look like and what it's made from. Then describe it. If you've got any paper to hand, you could even draw it!<br><br>To help you get started, I've written some prompts.</p> </div> <div class='speechBubble2 white rot5A'> <h6>1. Shape</h6> <p>What shape or form would it take? For example, would it be a giant drink can? Or perhaps an animal like a dolphin or an octupus?</p> </div> <div class='speechBubble2 white rot5'> <h6>2. Material</h6> <p>What would it be made from? For example, would it be wood? If not, why not? Or maybe metal or plastic? </p> </div> <div class='speechBubble2 white rot5A'> <h6>3. Contents</h6> <p>What would you be able to put in your recycling bin? What would you not allow, and why?</p> </div> <div class='speechBubble2 white rot5'> <h6>4. Location</h6> <p>Where would you put your recycling bin? What would be the best place to attract the most rubbish? </p> </div> <div class='speechBubble2 white rot5A'> <h6>5. Can you draw it?</h6> <p>Then you could post it to your socials.<br /><br />Good luck!</p> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>I've designed it!</h2> </div> </div>");
 		break;
@@ -775,6 +789,10 @@ function SetTask(){
 		break;
 	}
 
+	taskButtons();
+}
+
+function taskButtons(){
 	$(".page_taskContent .buttonCTA").click(function () {
 		switch(locTask){
 			case "8.0":
@@ -837,6 +855,159 @@ function StartCamera(){
 	}else{
 		console.log("camera API is not supported by your browser")
 	}
+}
+
+function initRubbish(){
+	gameCount = 30;
+	gameScore = 0;
+	gameData = "";
+	$(".scoreRight h1").html(gameCount);
+	$(".scoreLeft h1").html(gameScore);
+
+	$(".rubbish").draggable(
+	{
+		revert: "invalid",
+      start: function() {
+       	gameData = $(this).attr("id");
+		console.log($(this).attr("id"));
+      },
+      drag: function() {
+        
+      },
+      stop: function() {
+        $(this).hide();
+      }
+    });
+
+	$( ".bin" ).droppable({
+      accept: ".rubbish",
+      drop: function( event, ui ) {
+		if($(this).hasClass(gameData)){
+			playFX("correct");
+			gameScore += 10;
+		}else{
+			playFX("wrong");
+			gameScore -= 5;
+		}
+		$(".scoreLeft h1").html(gameScore);
+      }
+    });
+
+	$(".fishingIcon").click(function () {
+		if($(this).hasClass("sm")){
+			gameScore-= 5;
+		}else{
+			gameScore += 10
+		}
+		$(this).hide();
+		$(".scoreLeft h1").html(gameScore);
+	});
+	
+
+}
+
+function startRubbish(){
+	interval = setInterval(tickTock2, 1000);
+}
+
+function tickTock2(){
+	gameCount--;
+	$(".scoreRight h1").html(gameCount);
+	if(gameCount == 0){
+		clearInterval(interval);
+		taskComplete();
+	}
+}
+
+function initFishing(){
+	gameCount = 30;
+	gameScore = 0;
+	gameData = "";
+	$(".scoreRight h1").html(gameCount);
+	$(".scoreLeft h1").html(gameScore);
+
+	$(".fishingIcon").click(function () {
+		if($(this).hasClass("sm")){
+			gameScore-= 10;
+		}else{
+			gameScore+= 10;
+		}
+		$(this).hide();
+		$(".scoreLeft h1").html(gameScore);
+	});
+	
+
+}
+
+function startFishing(){
+	interval = setInterval(tickTock, 1000);
+	animateFish();
+}
+
+function animateFish(){
+	$(".fishingIcon").show();
+	var fishes = $(".fishingIcon").toArray();
+
+	for(var f = 0; f < fishes.length; f++){
+		if($(fishes[f]).hasClass("fR")){
+			$(fishes[f]).css("left", "-20vw" );
+			$(fishes[f]).animate({left:"130vw"}, (1+Math.random())*1000);
+		}else{
+			$(fishes[f]).css("left", "120vw" );
+			$(fishes[f]).animate({left:"-30vw"}, (1+Math.random())*1000);
+		}
+		var top = 40 + (Math.random()*40);
+		$(fishes[f]).css("top", top +"vh");
+	}
+
+}
+
+function isEven (number) {
+  return (number & 1) === 0;
+}
+
+function tickTock(){
+	gameCount--;
+	if(isEven(gameCount)) animateFish();
+	$(".scoreRight h1").html(gameCount);
+	if(gameCount == 0){
+		clearInterval(interval);
+		taskComplete();
+	}
+}
+
+function initPolly(){
+	gameCount = 0;
+	gameScore = 0;
+	gameData = "";
+	$(".pelican").removeClass("open");
+	
+	$( ".food" ).draggable(
+	{
+		revert: true,
+      start: function() {
+        playFX("gull");
+		$(".pelican").addClass("open");
+      },
+      drag: function() {
+        
+      },
+      stop: function() {
+        $(".pelican").removeClass("open");
+		if($(this).hasClass("food5")||$(this).hasClass("food7")||$(this).hasClass("food2")||$(this).hasClass("food4")){
+			playFX("correct");
+			$(this).hide();
+			gameScore++;
+		}else{
+			playFX("wrong");
+		}
+		if(gameScore == 4){
+			setTimeout(taskComplete,  1000);
+		}
+      }
+    });
+   
+
 }
 
 function initPairs(){
@@ -943,7 +1114,7 @@ function getLocationNow() {
 		navigator.geolocation.getCurrentPosition(positionNow, errorNow);
 	} else {
 		$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
-		
+		taskButtons();
 	}
 }
 
@@ -953,11 +1124,12 @@ function positionNow(position) {
 	console.log("'latitude: " + lat + "; longitude: " + lon +"'");
 	var str = "'latitude: " + lat + "; longitude: " + lon +"'";
 	$(".page_taskContent").html("<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'> <a-camera id='camera1' look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 5'> ></a-camera> <a-entity gltf-model='./assets/models/" + modelName + "' gps-new-entity-place=" + str+ "position='0 -1 0' scale='1 1 1'></a-entity> </a-scene> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
-		
+	taskButtons();	
 }
 
 function errorNow() {
 	 $(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
+	 taskButtons();
 }
 
 function isIOS() {
