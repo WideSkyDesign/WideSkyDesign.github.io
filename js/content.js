@@ -135,7 +135,7 @@ var json =
 				{
 					"Title": "Explore the Ice Arch",
 					"Intro": "Ah, how well I recall the opening ceremony and the magnificent ice arch. Yes, it really was made of ice!<br><br>It was modelled on an ancient stone arch built at Temple Bar in London. The parade passed right under it! Use your device's camera to bring a replica of the ice arch to life.<br><br>Find a flat surface with plenty of space to walk around, then touch 'I'm ready' to get started!",
-					"Feedback": "Very Good! You explored the ice arch. The arch was made of ice that came all the way from Norway. Of course, it started to melt as soon as the arch was constructed. It lost four tonnes of water just on the first day! But it must have looked amazing. ",
+					"Feedback": "Very Good! The arch was made of ice that came all the way from Norway. Of course, it started to melt as soon as it was constructed. It lost four tonnes of water just on the first day!",
 					"FeedbackClip": "video/Leo/very_good.mp4",
 					"CTA": "Let's go!",
 					"Theme": "MC",

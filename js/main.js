@@ -193,6 +193,7 @@ function init() {
 					isCorrect = false;
 					break;
 				case "location":
+					$("body").removeClass("black");
 					$(".title h1").html(json.Location[currentLocation].Title);
 					$(".page_location .backWatkin p").html(json.Location[currentLocation].Body);
 					$(".page_location .backPresenter p").html(json.Location[currentLocation].BodyCTA);
@@ -286,6 +287,13 @@ function init() {
 						case "14.0":
 							taskComplete();
 							break;
+						case "0.1":
+						case "2.0":
+						case "4.0":
+							StartCamera();
+							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
+							setTimeout(locationMessage, 3000);
+						break;
 						case "7.0":
 							StartCamera();
 							$(":mobile-pagecontainer").pagecontainer("change", "#taskContent", {changeHash: false});
@@ -728,19 +736,22 @@ function SetTask(){
 			$(".page_taskContent").html("<div class='backTask'>/ <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Here are some different types of sea wall to help you build your sand wall. You could try all three and see which one is best!</p> </div> <div class='speechBubble2 white rot5A'> <h6>1 Vertical</h6> <p>This type of sea wall has a flat front facing the sea and is banked up at the back.</p> </div> <div class='speechBubble2 white rot5'> <h6>2 Embankment</h6> <p>This one has mounds on both sides to help support the wall.</p> </div> <div class='speechBubble2 white rot5A'> <h6>3 Irregular</h6> <p>This is made from big pieces, usually stacked low at the front and high at the back. Hint: you could use rocks, shells or driftwood in this wall as well as sand!</p> </div> <div class='speechBubble2 white rot5'> <p> When your sand wall is complete, why not take a picture and share it to your...er...socials? Use the #WatkinWall hashtag to see what others have made.<br><br>How long do you think your sand wall will last? Have a guess. Or start the timer on your phone and see how long it takes before it's washed away. Stop the timer when it's all gone.<br><br>I implore you, though, to watch out for the tide! The sea rushes in very quickly here. </p> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>I did it!</h2> </div> </div>")
 		break;
 		case "0.1":
-			modelName = "seaside.glb";
-			getLocationNow();
+			//modelName = "seaside.glb";
+			//getLocationNow();
+			$(".page_taskContent").html("<video class='cameraView' id='camera' playsinline autoplay></video> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
 			break;
 		case "2.0":
-			modelName = "arch.glb";
-			getLocationNow();
+			//modelName = "arch.glb";
+			//getLocationNow();
+			$(".page_taskContent").html("<video class='cameraView' id='camera' playsinline autoplay></video> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
 			break;
 		case "2.1":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Find a square or rectangular piece of paper. You can use any paper that you can easily fold and cut. Tracing paper or tissue paper is ideal. It doesn't have to be white - you can try different colours. You can use fabric too, as long as you can cut it with scissors.</p> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Snowflake/1.svg' alt='instruction' class='instructionImage'> <h6>1.</h6> <p>Fold one corner up across to form a right triangle.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Snowflake/2.svg' alt='instruction' class='instructionImage'> <h6>2.</h6> <p>Trim the excess paper from the top.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Snowflake/3.svg' alt='instruction' class='instructionImage'> <h6>3.</h6> <p>Fold the bottom corner up along the folded edge.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Snowflake/4.svg' alt='instruction' class='instructionImage'> <h6>4.</h6> <p>Fold the triangle in half with folded edges together</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Snowflake/5.svg' alt='instruction' class='instructionImage'> <h6>5.</h6> <p>Fold the folded edge across to form a cone.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Snowflake/6.svg' alt='instruction' class='instructionImage'> <h6>6.</h6> <p>Trim excess paper from the top.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5A'> <img src='ui/Task/Snowflake/7.svg' alt='instruction' class='instructionImage'> <h6>7.</h6> <p>Cut shapes from each folded side, cutting all the way from one side to the other ONLY at the top and bottom.</p> <div class='clear'></div> </div> <div class='speechBubble2 white rot5'> <img src='ui/Task/Snowflake/8.svg' alt='instruction' class='instructionImage'> <h6>8.</h6> <p>Carefully open out your snowflake. You can iron it to make it nice and flat. Voila! You have made a snowflake.<br><br>Don't forget to put the waste paper in the recycling!</p> <div class='clear'></div> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>Let it snow!</h2> </div> </div>");
 		break;
 		case "4.0":
-			modelName = "train.glb";
-			getLocationNow();
+			//modelName = "train.glb";
+			//getLocationNow();
+			$(".page_taskContent").html("<video class='cameraView' id='camera' playsinline autoplay></video> <div class='arOverlay'> <div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> </div> </div>");
 			break;
 		case "5.1":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Your task for this location is to think of a story about some of these people. You could make notes on your phone, or if you've got any paper, you could even write it down! Here are some prompts to help you get started.</p> </div> <div class='speechBubble2 white rot5A'> <h6>1. Fisher</h6> <p>A fisher is waiting to go on leave after being at sea for two weeks. They are tired and dirty.</p> </div> <div class='speechBubble2 white rot5'> <h6>2. Pier worker</h6> <p>They have been hard at work loading and unloading cargo from the pier. All they want is to get home and put their feet up!</p> </div> <div class='speechBubble2 white rot5A'> <h6>3. Long journey</h6> <p>This person is seeking a better life in America. They came all the way from Europe and arrived in Cleethorpes at the pier. The train is the next step on their very long journey.</p> </div> <div class='speechBubble2 white rot5'> <h6>4. Holidays</h6> <p>A young family have just had their first bank holiday weekend at Cleethorpes. Did they have fun?</p> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>Completed my story!</h2> </div> </div>");
@@ -1125,6 +1136,10 @@ function handler(e) {
 		 getLocation();
 	}
   
+}
+
+function locationMessage(){
+	alert("Location data is not available!");
 }
 
 function getLocation() {

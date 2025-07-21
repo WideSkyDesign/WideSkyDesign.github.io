@@ -46,6 +46,16 @@
             <a-camera id='camera1' look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 5'> ></a-camera>
             <a-entity gltf-model='./assets/models/seaside.glb' gps-new-entity-place='latitude: 52.951903; longitude: -1.143857' position='0 -1 0' scale='1 1 1'></a-entity>
         </a-scene>
+        <video class='cameraView' id='camera' playsinline autoplay></video>
+        <div class='arOverlay'>
+                <div class='backTask'>
+                    <div class='buttonIcon iconClose' id='closeTask'></div>
+                </div>   
+        </div>
+    </div>
+
+    <div data-role='page' id='taskContent_0.1_backup' class='page_taskContent victorianHoliday'>
+        <video class='cameraView' id='camera' playsinline autoplay></video>
         <div class='arOverlay'>
                 <div class='backTask'>
                     <div class='buttonIcon iconClose' id='closeTask'></div>
