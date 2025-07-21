@@ -37,7 +37,6 @@ function init() {
 	console.log("init ready! " + window.innerWidth + " , " + window.innerHeight);
 	$(".topMenu").hide();
 	closePopups();
-	
 	//$(".mapImage").css("zoom", 1);
 
 	$(":mobile-pagecontainer").on("pagecontainerchange", function (event, ui) {
@@ -784,6 +783,10 @@ function SetTask(){
 		case "15.1":
 			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <video class='watkinCirclePop' playsinline autoplay loop> <source src='video/Watkin_yellow.mp4' type='video/mp4'> </video> <img src='ui/White question start.svg' alt='speach start' class='speechStart'> <div class='speechBubble white'> <p>Your task for this location is to design a recycling sculpture. Think about what it would look like and what it's made from. Then describe it. If you've got any paper to hand, you could even draw it!<br><br>To help you get started, I've written some prompts.</p> </div> <div class='speechBubble2 white rot5A'> <h6>1. Shape</h6> <p>What shape or form would it take? For example, would it be a giant drink can? Or perhaps an animal like a dolphin or an octupus?</p> </div> <div class='speechBubble2 white rot5'> <h6>2. Material</h6> <p>What would it be made from? For example, would it be wood? If not, why not? Or maybe metal or plastic? </p> </div> <div class='speechBubble2 white rot5A'> <h6>3. Contents</h6> <p>What would you be able to put in your recycling bin? What would you not allow, and why?</p> </div> <div class='speechBubble2 white rot5'> <h6>4. Location</h6> <p>Where would you put your recycling bin? What would be the best place to attract the most rubbish? </p> </div> <div class='speechBubble2 white rot5A'> <h6>5. Can you draw it?</h6> <p>Then you could post it to your socials.<br /><br />Good luck!</p> </div> <div class='buttonCTA blue'> <h2 class='whiteT'>I've designed it!</h2> </div> </div>");
 		break;
+		case "16.0":
+			$(".page_taskContent").html("<div class='backTask'> <div class='buttonIcon iconClose' id='closeTask'></div> <div class='birdHolder'> <div class='rightBirds'> <div class='birdCircle blue' id='bird2'> <div class='birdCircleInner yellow'> <h6>1</h6> </div> </div> <div class='birdAudioIcon' id='bird2'></div> <div class='birdCircle blue' id='bird4'> <div class='birdCircleInner yellow'> <h6>2</h6> </div> </div> <div class='birdAudioIcon' id='bird4'></div> <div class='birdCircle blue' id='bird1'> <div class='birdCircleInner yellow'> <h6>3</h6> </div> </div> <div class='birdAudioIcon' id='bird1'></div> <div class='birdCircle blue' id='bird5'> <div class='birdCircleInner yellow'> <h6>4</h6> </div> </div> <div class='birdAudioIcon' id='bird5'></div> <div class='birdCircle blue' id='bird3'> <div class='birdCircleInner yellow'> <h6>5</h6> </div> </div> <div class='birdAudioIcon' id='bird3'></div> </div> <div class='leftBirds'> <div class='birdImage bird1 drag' id='bird1'></div> <div class='birdNameOuter blue'> <div class='birdNameInner white'> <h6>Mute swan</h6> </div> </div> <div class='birdImage bird2 drag' id='bird2'></div> <div class='birdNameOuter blue'> <div class='birdNameInner white'> <h6>Common gull</h6> </div> </div> <div class='birdImage bird3 drag' id='bird3'></div> <div class='birdNameOuter blue'> <div class='birdNameInner white'> <h6>Ringed plover</h6> </div> </div> <div class='birdImage bird4 drag' id='bird4'></div> <div class='birdNameOuter blue'> <div class='birdNameInner white'> <h6>Little egret</h6> </div> </div> <div class='birdImage bird5 drag' id='bird5'></div> <div class='birdNameOuter blue'> <div class='birdDrag birdNameInner white'> <h6>Great tit</h6> </div> </div> </div> </div> </div>");
+			initBirds();
+			break;
 		default:
 			$(".page_taskContent").html("");
 		break;
@@ -855,6 +858,49 @@ function StartCamera(){
 	}else{
 		console.log("camera API is not supported by your browser")
 	}
+}
+
+function initBirds(){
+	$(".birdCircle").click(function () {
+		playFX(this.id);
+	});
+
+	$(".birdAudioIcon").click(function () {
+		playFX(this.id);
+	});
+	
+
+	$(".drag").draggable(
+	{
+		revert: "invalid",
+      start: function() {
+       	gameData = $(this).attr("id");
+		console.log($(this).attr("id"));
+      },
+      drag: function() {
+        
+      },
+      stop: function() {
+       
+      }
+    });
+
+	$( ".birdCircle" ).droppable({
+      accept: ".drag",
+      drop: function( event, ui ) {
+		console.log("drop " + $(this).attr("id"));
+		if($(this).attr("id") == gameData){
+			playFX("correct");
+			gameScore ++;
+		}else{
+			playFX("wrong");
+			
+		}
+		if(gameScore == 5){
+			setTimeout(taskComplete, 1000);
+		}
+      }
+    });
 }
 
 function initRubbish(){

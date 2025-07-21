@@ -219,6 +219,16 @@ var json =
 					"Theme": "MC",
 					"Type": "ar",
 					"Complete": false
+				},
+				{
+					"Title": "Train jigsaw",
+					"Intro": "I love puzzles, especially jigsaws, and the more fiendish the better.<br><br>Drag and drop the puzzle pieces into place to form a picture of a steam train at Cleethorpes Station.",
+					"Feedback": "Well done, you finished the jigsaw. This was the last steam train to depart Cleethorpes Station. By that time it had carried over five million people!",
+					"FeedbackClip": "video/Alexis/well_done.mp4",
+					"CTA": "Play the game!",
+					"Theme": "MC",
+					"Type": "game",
+					"Complete": false
 				}
 			]
 		},
@@ -325,6 +335,16 @@ var json =
 					"CTA": "Let's go!",
 					"Theme": "DBTB",
 					"Type": "ar",
+					"Complete": false
+				},
+				{
+					"Title": "Build the Pier",
+					"Intro": "Piers have been part of the British seaside for over two hundred years. Candy floss and concerts, pagodas and pavilions – piers are full of fun. Cleethorpes Pier was longer in my day, but it is still a special place. What is your favourite part of the Pier?<br><br>Your task is to build a sturdy Pier for Cleethorpes! Drag and drop the parts of the Pier into the right place. The Pier needs to be strong to support all the people and activities. Once you've completed the task, we can have a go on the arcade games! ",
+					"Feedback": "Well done! You built the Pier. Here's a reward to add to your growing collection. Time to extend the railway!",
+					"FeedbackClip": "video/Leo/well_done.mp4",
+					"CTA": "Play the game!",
+					"Theme": "DBTB",
+					"Type": "game",
 					"Complete": false
 				}
 			]
@@ -440,6 +460,16 @@ var json =
 					"FeedbackClip": "video/Archie/amazing.mp4",
 					"CTA": "Play the game!",
 					"Theme": "LF",
+					"Type": "game",
+					"Complete": false
+				},
+				{
+					"Title": "Piece together the past",
+					"Intro": "The Fish Hatchery was a busy place. Lots of Cleethorpes people worked there.<br><br>Drag and drop the puzzle pieces into place to form a picture of a working day at the Fish Hatchery.",
+					"Feedback": "Well done, you finished the jigsaw. The Fish Hatchery played an important role in sustaining fish stocks. Watkin had the vision to realise how crucial this was. ",
+					"FeedbackClip": "video/Leo/well_done.mp4",
+					"CTA": "Play the game!",
+					"Theme": "DBTB",
 					"Type": "game",
 					"Complete": false
 				}

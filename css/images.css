@@ -260,7 +260,7 @@
     background-image: url('../ui/Fishing/fish3_sm.png');
 }
 .fish4.sm{
-     width: 7vh;
+    width: 7vh;
     height: 5vh;
     background-image: url('../ui/Fishing/fish4_sm.png');
 }
@@ -287,6 +287,21 @@
 }
 .rubbish.rubb4{
     background-image: url('../ui/Bin/Paper@2x.png');
+}
+.birdImage.bird1{
+background-image: url('../ui/Bird/Bird - mute swan.svg');
+}
+.birdImage.bird2{
+background-image: url('../ui/Bird/Bird - common gull.svg');
+}
+.birdImage.bird3{
+background-image: url('../ui/Bird/Bird - common ringed plover.svg');
+}
+.birdImage.bird4{
+background-image: url('../ui/Bird/Bird - little egret.svg');
+}
+.birdImage.bird5{
+background-image: url('../ui/Bird/Bird - great tit.svg');
 }
 #map_0{
     left: 2620px;
