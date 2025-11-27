@@ -727,7 +727,7 @@ img.guideImage {
     height: 65vh;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    margin-top: 30vh;
+    margin-top: 35vh;
     margin-bottom: 0vh;
 }
 
@@ -738,7 +738,7 @@ img.guideImage {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     padding-top: 5vh;
-    padding-bottom: 20vh;
+    padding-bottom: 40vh;
 }
 
 .audioBar{

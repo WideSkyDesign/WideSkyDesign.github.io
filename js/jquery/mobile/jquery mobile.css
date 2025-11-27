@@ -947,12 +947,12 @@ body.ui-mobile-viewport, div.ui-mobile-viewport {
 }
 @media screen and (orientation:portrait) {
     .ui-mobile .ui-page {
-        min-height: 420px
+        min-height: 100vh;
     }
 }
 @media screen and (orientation:landscape) {
     .ui-mobile .ui-page {
-        min-height: 300px
+        min-height: 100vw;
     }
 }
 .ui-mobile-rendering > * {

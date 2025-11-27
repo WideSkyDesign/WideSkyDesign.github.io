@@ -10,6 +10,7 @@ scoreNGU = 0,
 onboarding = 0,
 gameScore = 0;
 gameCount = 0;
+gameTime = 0;
 gameDate = "";
 loctask = "";
 themeVideo = "",
@@ -235,12 +236,6 @@ function init() {
 					SetThemeBackground();
 					$(".topMenu").hide();
 					break;
-				case "help":
-					$(".title h1").html("Help");
-					break;
-				case "about":
-					$(".title h1").html("About");
-					break;
 				case "contact":
 					$(".title h1").html("Contact");
 					break;
@@ -343,8 +338,13 @@ function init() {
 	});
 
 	$(".buttonMenu").click(function () {
-
-		$(":mobile-pagecontainer").pagecontainer("change", "#" + this.id, {changeHash: false});
+		if(this.id != "help"){
+			$(":mobile-pagecontainer").pagecontainer("change", "#" + this.id, {changeHash: false});
+		}else{
+			onboarding = 0;
+			$(":mobile-pagecontainer").pagecontainer("change", "#map", {changeHash: false});
+		}
+		
 
 	});
 
@@ -887,6 +887,7 @@ function initBirds(){
       start: function() {
        	gameData = $(this).attr("id");
 		console.log($(this).attr("id"));
+		
       },
       drag: function() {
         
@@ -897,28 +898,39 @@ function initBirds(){
     });
 
 	$( ".birdCircle" ).droppable({
-      accept: ".drag",
-      drop: function( event, ui ) {
-		console.log("drop " + $(this).attr("id"));
-		if($(this).attr("id") == gameData){
-			playFX("correct");
-			gameScore ++;
-		}else{
-			playFX("wrong");
-			
-		}
-		if(gameScore == 5){
-			setTimeout(taskComplete, 1000);
-		}
+		accept: function(draggable) {
+			if ($(this).attr("id") == gameData){
+				
+				return true;
+			}else{
+				
+				return false;
+			}
+		},
+      	drop: function( event, ui ) {
+			if ($(this).attr("id") == gameData){
+				if(ui.draggable.hasClass("dragged")){
+
+				}else{
+					playFX("correct");
+					gameScore++;
+					$(ui.draggable).addClass("dragged");
+				}
+				
+			}
+			if(gameScore == 5){
+				setTimeout(taskComplete, 1000);
+			}
       }
     });
 }
 
 function initRubbish(){
-	gameCount = 30;
+	gameTime = 30;
 	gameScore = 0;
+	gameCount = 0;
 	gameData = "";
-	$(".scoreRight h1").html(gameCount);
+	$(".scoreRight h1").html(gameTime);
 	$(".scoreLeft h1").html(gameScore);
 
 	$(".rubbish").draggable(
@@ -932,16 +944,30 @@ function initRubbish(){
         
       },
       stop: function() {
-        $(this).hide();
+        
       }
     });
 
 	$( ".bin" ).droppable({
-      accept: ".rubbish",
+      accept: function(draggable) {
+			if ($(this).hasClass(gameData)){
+				
+				return true;
+			}else{
+				
+				return false;
+			}
+		},
       drop: function( event, ui ) {
 		if($(this).hasClass(gameData)){
 			playFX("correct");
+			$(ui.draggable).hide();
 			gameScore += 10;
+			gameCount++;
+			if(gameCount == 4){
+				clearInterval(interval);
+				setTimeout(taskComplete, 500);
+			}
 		}else{
 			playFX("wrong");
 			gameScore -= 5;
@@ -968,19 +994,19 @@ function startRubbish(){
 }
 
 function tickTock2(){
-	gameCount--;
-	$(".scoreRight h1").html(gameCount);
-	if(gameCount == 0){
+	gameTime--;
+	$(".scoreRight h1").html(gameTime);
+	if(gameTime == 0){
 		clearInterval(interval);
 		taskComplete();
 	}
 }
 
 function initFishing(){
-	gameCount = 30;
+	gameTime = 30;
 	gameScore = 0;
 	gameData = "";
-	$(".scoreRight h1").html(gameCount);
+	$(".scoreRight h1").html(gameTime);
 	$(".scoreLeft h1").html(gameScore);
 
 	$(".fishingIcon").click(function () {
@@ -1024,24 +1050,30 @@ function isEven (number) {
 }
 
 function tickTock(){
-	gameCount--;
-	if(isEven(gameCount)) animateFish();
-	$(".scoreRight h1").html(gameCount);
-	if(gameCount == 0){
+	gameTime--;
+	if(isEven(gameTime)) animateFish();
+	$(".scoreRight h1").html(gameTime);
+	if(gameTime == 0){
 		clearInterval(interval);
 		taskComplete();
 	}
 }
 
 function initPolly(){
-	gameCount = 0;
+	gameTime = 0;
 	gameScore = 0;
 	gameData = "";
 	$(".pelican").removeClass("open");
 	
 	$( ".food" ).draggable(
 	{
-		revert: true,
+		revert: function(draggable) {
+			if($(this).hasClass("food5")||$(this).hasClass("food7")||$(this).hasClass("food2")||$(this).hasClass("food4")){
+				return false;
+			}else{
+				return true;
+			}
+		},
       start: function() {
         playFX("gull");
 		$(".pelican").addClass("open");
@@ -1068,7 +1100,7 @@ function initPolly(){
 }
 
 function initPairs(){
-	gameCount = 0;
+	gameTime = 0;
 	gameScore = 0;
 	gameData = "";
 	$(".cardFront").removeClass("p1 p2 p3 p4 p5 p6 p7 p8")
@@ -1143,23 +1175,28 @@ function locationMessage(){
 }
 
 function getLocation() {
+	console.log("getting loaction");
   if (navigator.geolocation) {
 	$(".meIcon").show();
+	console.log("show me");
     navigator.geolocation.watchPosition(showPosition, error);
   } else {
+	console.log("hide me");
     $(".meIcon").hide();
   }
 }
 
 function showPosition(position) {
 	if(currentPage == "map"){
+		console.log(position.coords.latitude + " - " + position.coords.longitude);
 		if(position.coords.latitude > 53.553611 && position.coords.latitude < 53.557222 && position.coords.longitude > -0.045556 && position.coords.longitude < -0.001389){
+			console.log("I'm in the area");
 			var lat =  (53.553611 - position.coords.latitude)*1134311.82;
 			$(".compassPoint").css("left", lat + "px");
 
 			var lon =  (-0.045556 -position.coords.longitude)*92738.92;
 			$(".compassPoint").css("top", lon + "px");
-
+			console.log("My position is " + lat +" " + lon);
 		}
 		
 	}
